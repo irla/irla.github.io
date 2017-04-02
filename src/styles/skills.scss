@@ -1,0 +1,16 @@
+@import 'variables';
+
+span.skill {
+  margin: 2px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.badge.highlight {
+  background-color: $highlight-color;
+}
+
+.fa {
+  color: $primary-color;
+}

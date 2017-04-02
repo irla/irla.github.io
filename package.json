@@ -1,0 +1,49 @@
+{
+  "name": "irla-react-cv",
+  "version": "0.6.0",
+  "description": "This is Pawel Irla CV project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --hot --history-api-fallback --open",
+    "prd": "webpack -p --config webpack.config.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate/issues"
+  },
+  "homepage": "https://github.com/wkwiatek/react-hot-loader-minimal-boilerplate#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "font-awesome": "^4.7.0",
+    "react-fontawesome": "^1.5.0",
+    "css-loader": "^0.27.3",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-addons-transition-group": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "reactstrap": "4.3.0",
+    "style-loader": "^0.13.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "file-loader": "^0.10.1",
+    "html-webpack-plugin": "^2.28.0",
+    "json-loader": "https://registry.npmjs.org/json-loader/-/json-loader-0.5.4.tgz",
+    "node-sass": "^4.5.2",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "sass-loader": "^6.0.3",
+    "url-loader": "^0.5.8",
+    "webpack": "https://registry.npmjs.org/webpack/-/webpack-2.2.1.tgz",
+    "webpack-dev-server": "^2.4.1"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "commercial": [
+    {
+      "name": "Seeds Ordering",
+      "startDate": "2012-07-01",
+      "endDate": "2013-04-17",
+      "description": "Description of PHP project",
+      "technologies": ["PHP", "PHPUnit", "CodeIgniter", "JavaScript", "jQuery", "Twitter Bootstrap", "Apache", "CSS", "MVC", "REST"]
+    },
+    {
+      "name": "ODT",
+      "startDate": "2011-07-01",
+      "endDate": "2012-06-25",
+      "description": "Description of ODT project",
+      "technologies": ["J2EE", "Hibernate", "JPA", "JSP", "Spring MVC 3", "Spring Security", "JavaScript",
+        "jQuery", "JUnit", "HtmlUnit", "CSS", "XSLT", "Tomcat", "QueryDSL", "Mercurial"]
+    },
+    {
+      "name": "Blood Donnors",
+      "startDate": "2007-07-01",
+      "endDate": "2011-06-10",
+      "description": "System made for Polish healthcare department - helps to control blood giving and getting process",
+      "technologies": ["J2EE", "Hibernate", "JSP", "Spring 2.5", "jBPM", "Struts 1.x", "JavaScript", "Ajax", "DWR",
+        "DHTML", "RDMBS", "DB2", "JUnit", "ANT", "Log4J", "CVS", "JBoss", "Tomcat"]
+    }
+  ],
+  "hobby": [
+    {
+      "name": "sledzeniepaczek.pl",
+      "startDate": "2010-03-15",
+      "endDate": "2010-09-15",
+      "description":  "A small web application that searches of packages in most popular companies. It uses HtmlUnit to wrap search results of each provider. It's hosted on Google Cloud – GAE. It also provides tracking system, which sends emails when pack state changes.",
+      "technologies": ["Spring IOC", "Spring MVC", "Spring Security", "GWT", "GAE", "JPA", "HtmlUnit", "AspectJ", "Eclipse"]
+    },
+    {
+      "name": "eventbusjs",
+      "startDate": "2012-04-15",
+      "endDate": "2012-04-18",
+      "description":  "Very small open-source JavaScript library which implements Event Bus design pattern. Library is not described, to understand its functionality I recommend to see the unit tests - https://github.com/irla/eventbusjs",
+      "technologies": ["JavaScript", "karma", "requirejs"]
+    }
+  ]
+}

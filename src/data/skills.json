@@ -1,0 +1,86 @@
+{
+  "skills": [
+    {
+      "name": "Programing languages",
+      "details": {
+        "Java": {
+          "score": 9,
+          "info": "My favorite language and the one I most often work with. I like it for its consistency and stability."
+        },
+        "JavaScript": {
+          "score": 8,
+          "info": "Like to work with it as it is very flexible, sometimes wired and funny."
+        },
+        "PHP": {
+          "score": 6
+        },
+        "Groovy": {
+          "score": 4
+        },
+        "Python": {
+          "score": 3,
+          "info": "I sometimes used it to quickly write some extension (e.g. for mercurial or skype) - nice to quickly prototype something"
+        },
+        "Scala": {
+          "score": 4
+        }
+      }
+    },
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": [
+        "JEE",
+        "Jboss-Wildfly",
+        "Tomcat"
+      ],
+      "details": {
+        "JEE": {
+          "score": 6,
+          "info": "I'm not a fan of the standard as it is often overcomplicated or wrongly designed (e.g. JAAS)"
+        },
+        "Jboss-Wildfly": {
+          "score": 3,
+          "info": "It's not my choose java web server but I was often working with it"
+        },
+        "Tomcat": {
+          "score": 3,
+          "info": "Much simpler than Jboss"
+        }
+      }
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Very good",
+      "score": 8
+    },
+    {
+      "name": "Polish",
+      "level": "Native",
+      "score": 10
+    }
+  ],
+  "interests": [
+    {
+      "name": "Programing",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    },
+    {
+      "name": "DIY",
+      "keywords": []
+    },
+    {
+      "name": "garden works",
+      "keywords": []
+    },
+    {
+      "name": "electronics",
+      "keywords": []
+    }
+  ]
+}

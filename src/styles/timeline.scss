@@ -1,0 +1,47 @@
+@import 'variables';
+
+.popover.popover-static {
+  position: relative;
+  margin-bottom: 11px;
+  max-width: 800px;
+  margin-top: 11px;
+}
+
+.timeline {
+
+  h4 {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .header {
+    margin: 10px 0px;
+  }
+}
+
+.timeline-left.col-6 {
+  padding-right: 11px;
+}
+.timeline-right.col-6 {
+  border-left: 1px dashed grey;
+  padding-left: 0px;
+}
+
+.popover-footer {
+  padding: 9px 14px;
+
+  .badge {
+    margin: 2px;
+  }
+}
+
+.badge.year-circle {
+  height: 46px;
+  text-align: center;
+
+  h6 {
+    max-width: 33px;
+    padding-top: 9px;
+  }
+}
+
