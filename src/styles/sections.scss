@@ -1,6 +1,7 @@
 @import 'variables';
 
 .section {
+  margin-bottom: 5px;
 
   label {
     font-size: 1.2em;
@@ -9,20 +10,31 @@
 
   hr {
     margin-top: 3px;
-    height: 2px;
+    height: 1px;
     color: $primary-color;
     border-color: $primary-color;
     background-color: $primary-color;
   }
+  > small {
+    float: right;
+    padding-top: 8px;
+  }
 }
 
-.sub-section {
-  border-bottom: 1px dashed $primary-color;
-  margin-bottom: 1.1em;
+.popover-static.sub-section {
+  border: none;
 
-  > label {
-    margin-bottom: 2px;
+  h3.popover-title {
+    background: none;
+    border-bottom-color: $secondary-color;
   }
+}
+form {
+  margin: 11px;
+}
+
+body {
+  overflow-y:scroll;
 }
 
 

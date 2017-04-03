@@ -5,41 +5,29 @@
     "website": "http://sygnitysbs.pl",
     "startDate": "2007-07-01",
     "endDate": "2011-06-30",
-    "summary": "Web and business-logic design and development, defining requirements",
-    "highlights": [
-      "Health"
-    ]
+    "summary": "Web and business-logic design and development, defining requirements"
   },{
     "company": "Tieto",
     "position": "Senior Software Developer",
     "website": "https://www.tieto.com",
     "startDate": "2011-07-01",
     "endDate": "2012-06-30",
-    "summary": "Defining customer requirements, development, maintaining and testing. Working according to agile and scrum methodology",
-    "highlights": [
-      "Scrum"
-    ]
-  }],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "website": "http://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description...",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
+    "summary": "Defining customer requirements, development, maintaining and testing. Working according to agile and scrum methodology"
+  },{
+    "company": "Adaptris",
+    "position": "Senior Software Developer/Team Leader",
+    "website": "http://adaptris.com",
+    "startDate": "2012-07-01",
+    "endDate": "Now",
+    "summary": "Web development, improving performance of applications, polish branch team leading (\"java team\"), software architecture desing"
   }],
   "education": [{
     "institution": "University of Zielona Góra",
-    "area": "Faculty of Electrical Engineeringt",
+    "area": "Faculty of Electrical Engineering",
     "studyType": "Bachelor",
     "startDate": "2002-10-01",
     "endDate": "2007-10-15",
-    "gpa": "5.0",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
+    "summary": ["Master’s thesis: \"VoIP service implementation in multilayer application environment\"",
+                "Grade of master’s thesis – very good mark"]
   }]
 }

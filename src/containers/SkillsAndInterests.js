@@ -5,11 +5,11 @@ import SubSection from '../components/SubSection.js'
 import Skills from '../components/Skills.js'
 import Stars from '../components/Stars.js'
 
-class Right extends Component {
+class SkillsAndInterests extends Component {
 
   render() {
     const skills = this.props.skills.map((skill) =>
-      <SubSection label={skill.name}>
+      <SubSection title={skill.name}>
         <Skills skill={skill} filter={this.props.filter}/>
       </SubSection>
     )
@@ -25,27 +25,29 @@ class Right extends Component {
     return <div>
         <Row>
           <Col>
-            <Section label="Skills">
+            <Section title="Skills" info="Move the mouse over skill to see details">
               {skills}
             </Section>
           </Col>
         </Row>
-        <Row>
-          <Col>
-            <Section label="Interests">
-              {interests}
-            </Section>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Section label="Languages">
-              {languages}
-            </Section>
-          </Col>
-        </Row>
+        {!this.props.filter && [
+          <Row>
+            <Col>
+              <Section title="Interests">
+                {interests}
+              </Section>
+            </Col>
+          </Row>,
+          <Row>
+            <Col>
+              <Section title="Languages">
+                {languages}
+              </Section>
+            </Col>
+          </Row>
+        ]}
       </div>
   }
 }
 
-export default Right
+export default SkillsAndInterests

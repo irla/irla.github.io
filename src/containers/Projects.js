@@ -5,6 +5,7 @@ import '../styles/timeline.scss'
 
 import Popover from '../components/StaticPopover.js'
 import Section from '../components/Section.js'
+import {dates} from '../helpers.js'
 
 function highlight(value, filter, def = false) {
   if (! filter) return def
@@ -18,7 +19,7 @@ const Project = ({project, position, filter}) => {
   return <Popover
             title={project.name}
             position={position}
-            startDate={project.startDate}
+            startDate={dates.range(project.startDate, project.endDate)}
             footer={technologies}>
     {project.description}
   </Popover>
@@ -46,10 +47,6 @@ const Year = ({year, commercials, hobby, filter}) => (
 class Projects extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      sortDir: 'desc'
-    }
-    this.changeSort = this.changeSort.bind(this)
   }
   groupProjectsByYear(projects) {
     const map = new Map()
@@ -67,21 +64,13 @@ class Projects extends Component {
     })
     return map
   }
-  changeSort() {
-    this.setState(prevState => {
-      if (prevState.sortDir == 'desc') {
-        return {sortDir: 'asc'}
-      }
-      return {sortDir: 'desc'}
-    })
-  }
   render() {
     const years = []
     const {projects} = this.props
     const commercials = this.groupProjectsByYear(projects.commercial)
     const hobby = this.groupProjectsByYear(projects.hobby)
     const currYear = (new Date()).getFullYear()
-    if (this.state.sortDir == 'desc') {
+    if (this.props.sortDir == 'desc') {
       for (let i = currYear; i > 2000; i--) {
         if (commercials.has(i) || hobby.has(i)) {
           years.push(<Circle>{i}</Circle>)
@@ -97,13 +86,17 @@ class Projects extends Component {
       }
     }
 
-    return <Section className="timeline" label="Projects">
+    if (years.length == 0) {
+      years.push(<Row><Col className="text-center">Sorry, no projects found :(</Col></Row>)
+    }
+
+    return <Section className="timeline" title="Projects" info="Click arrow below to change sort direction">
       <Row className="header">
         <Col xs="5">
           <h4>Commercial</h4>
         </Col>
         <Col xs="2" className="text-center">
-          <FontAwesome name={this.state.sortDir == 'desc' ? 'arrow-circle-up' : 'arrow-circle-down'} onClick={this.changeSort} style={{fontSize: "2.2em", cursor: "pointer"}}/>
+          <FontAwesome name={this.props.sortDir == 'desc' ? 'arrow-circle-up' : 'arrow-circle-down'} onClick={this.props.onChangeSort} style={{fontSize: "2.2em", cursor: "pointer"}}/>
         </Col>
         <Col xs="5">
           <h4>Hobby</h4>

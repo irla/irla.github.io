@@ -4,7 +4,8 @@ import '../styles/sections.scss'
 
 const Section = (props) => (
   <div className={"section " + props.className}>
-    <Label>{props.label}</Label>
+    <Label>{props.title}</Label>
+    <small>{props.info}</small>
     <hr/>
     {props.children}
   </div>

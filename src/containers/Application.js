@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
-import { Button, Container, Row, Col, Input, Form, FormGroup  } from 'reactstrap'
+import { Button, Container, Row, Col, Input, Form, FormGroup, Jumbotron  } from 'reactstrap'
 
-import Right from './Rigth.js'
-import Center from './Center.js'
+import SkillsAndInterests from './SkillsAndInterests.js'
+import Experience from './Experience.js'
 import Projects from './Projects.js'
 
 import projectData from '../data/projects.json'
 import skillData from '../data/skills.json'
+import experience from '../data/experience.json'
 
 const jsonResume = {
   "basics": {
@@ -49,14 +50,16 @@ const jsonResume = {
   }]
 }
 
-class Layout extends Component {
+class Application extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      filter: ''
+      filter: '',
+      sortDir: 'desc'
     }
     this.onFilterChange = this.onFilterChange.bind(this)
     this.onClearClicked = this.onClearClicked.bind(this)
+    this.onChangeSort = this.onChangeSort.bind(this)
   }
   onFilterChange(event) {
     this.setState({
@@ -69,9 +72,18 @@ class Layout extends Component {
     })
     event.preventDefault()
   }
+  onChangeSort() {
+    this.setState(prevState => {
+      console.log(prevState.sortDir)
+      if (prevState.sortDir == 'desc') {
+        return {sortDir: 'asc'}
+      }
+      return {sortDir: 'desc'}
+    })
+  }
   render() {
-    const projects = <Projects projects={projectData} filter={this.state.filter}/>
-    const skills = <Right skills={skillData.skills} interests={skillData.interests}
+    const projects = <Projects projects={projectData} filter={this.state.filter} onChangeSort={this.onChangeSort} sortDir={this.state.sortDir}/>
+    const skills = <SkillsAndInterests skills={skillData.skills} interests={skillData.interests}
                           languages={skillData.languages} filter={this.state.filter} />
     const body = []
     if (this.state.filter) {
@@ -84,20 +96,21 @@ class Layout extends Component {
     } else {
       body.push(
         <Row>
-          <Col xs="8"><Center /></Col>
+          <Col xs="8"><Experience works={experience.work} education={experience.education}/></Col>
           <Col xs="4">{skills}</Col>
         </Row>
       )
-      body.push(<Row>{projects}</Row>)
+      body.push(<Container><Row>{projects}</Row></Container>)
     }
     return <Container>
-      <Row>
-        <Col xs="6">
+      <Row class="header">
+        <Col xs="8">
           <h1>Paweł Irla</h1>
           <span>Portfolio page - work in progress</span>
+          <hr />
         </Col>
-        <Col xs="6">
-          <Form inline className="float-right">
+        <Col xs="4">
+          <Form inline>
             <FormGroup>
               <Input placeholder="Filter..." value={this.state.filter} onChange={this.onFilterChange}/>
               <Button onClick={this.onClearClicked}>Clear</Button>
@@ -110,4 +123,4 @@ class Layout extends Component {
   }
 }
 
-export default Layout
+export default Application

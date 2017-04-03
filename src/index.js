@@ -4,7 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
-import Layout from './containers/Layout'
+import Layout from './containers/Application'
 
 const render = Component => {
   ReactDOM.render(
@@ -18,5 +18,5 @@ const render = Component => {
 render(Layout)
 
 if (module.hot) {
-  module.hot.accept('./containers/Layout', () => { render(Layout) })
+  module.hot.accept('./containers/Application', () => { render(Layout) })
 }
