@@ -28,12 +28,6 @@
     },
     {
       "name": "Web Development",
-      "level": "Master",
-      "keywords": [
-        "JEE",
-        "Jboss-Wildfly",
-        "Tomcat"
-      ],
       "details": {
         "JEE": {
           "score": 6,
@@ -41,11 +35,20 @@
         },
         "Jboss-Wildfly": {
           "score": 3,
-          "info": "It's not my choose java web server but I was often working with it"
+          "info": "It's not my choice java web server but I was often working with it"
         },
         "Tomcat": {
           "score": 3,
           "info": "Much simpler than Jboss"
+        }
+      }
+    },
+    {
+      "name": "Mobile Development",
+      "details": {
+        "Dagger": {
+          "score": 6,
+          "info": "Small and sharp, I also use it in small java web apps - for which Spring IOC is to heavy"
         }
       }
     }

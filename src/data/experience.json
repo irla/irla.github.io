@@ -1,12 +1,12 @@
 {
-  "work": [{
-    "company": "Max Elektronik",
-    "position": "Senior Software Developer",
-    "website": "http://sygnitysbs.pl",
-    "startDate": "2007-07-01",
-    "endDate": "2011-06-30",
-    "summary": "Web and business-logic design and development, defining requirements"
-  },{
+  "work": [ {
+    "company": "Adaptris",
+    "position": "Senior Software Developer/Team Leader",
+    "website": "http://adaptris.com",
+    "startDate": "2012-07-01",
+    "endDate": "Now",
+    "summary": "Web development, improving performance of applications, polish branch team leading (\"java team\"), software architecture desing"
+    },{
     "company": "Tieto",
     "position": "Senior Software Developer",
     "website": "https://www.tieto.com",
@@ -14,12 +14,12 @@
     "endDate": "2012-06-30",
     "summary": "Defining customer requirements, development, maintaining and testing. Working according to agile and scrum methodology"
   },{
-    "company": "Adaptris",
-    "position": "Senior Software Developer/Team Leader",
-    "website": "http://adaptris.com",
-    "startDate": "2012-07-01",
-    "endDate": "Now",
-    "summary": "Web development, improving performance of applications, polish branch team leading (\"java team\"), software architecture desing"
+    "company": "Max Elektronik",
+    "position": "Senior Software Developer",
+    "website": "http://sygnitysbs.pl",
+    "startDate": "2007-07-01",
+    "endDate": "2011-06-30",
+    "summary": "Web and business-logic design and development, defining requirements"
   }],
   "education": [{
     "institution": "University of Zielona Góra",

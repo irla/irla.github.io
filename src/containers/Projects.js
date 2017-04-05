@@ -16,12 +16,17 @@ const Project = ({project, position, filter}) => {
   const technologies = project.technologies.map((tech) =>(
     <Badge className={highlight(tech, filter) ? "highlight" : ""}>{tech}</Badge>
   ))
+  const footer = (<div>
+      {technologies}
+      {project.url && <div className="text-right"><a href={project.url}>{project.url}</a></div>}
+    </div>)
   return <Popover
             title={project.name}
             position={position}
             startDate={dates.range(project.startDate, project.endDate)}
-            footer={technologies}>
-    {project.description}
+            footer={footer}>
+    <div>{project.description}</div>
+    {project.role && <div style={{paddingTop: "11px"}}><b>My role: </b>{project.role}</div>}
   </Popover>
 }
 
@@ -90,7 +95,7 @@ class Projects extends Component {
       years.push(<Row><Col className="text-center">Sorry, no projects found :(</Col></Row>)
     }
 
-    return <Section className="timeline" title="Projects" info="Click arrow below to change sort direction">
+    return <Section className="timeline" title="Projects Timeline" info="Click arrow below to change sort direction">
       <Row className="header">
         <Col xs="5">
           <h4>Commercial</h4>
