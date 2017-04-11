@@ -1,19 +1,75 @@
 {
   "commercial": [
     {
+      "name": "Business Integration Platform",
+      "startDate": "2016-04-04",
+      "endDate": "Now",
+      "description": "Integration platform which allows customers to track and monitor their orders, movements or stocks by integrating their backend system.",
+      "role": "Implementing required functionality, testing, helping team members, leading scrum and retrospective meetings",
+      "technologies": ["Java", "JSF", "PrimeFaces", "EJB", "Wildfly", "JAX-RS", "WebServices", "Infinispan", "Docker"]
+    },
+    {
+      "name": "jaxrs-client-proxy",
+      "startDate": "2016-02-06",
+      "endDate": "2016-11-04",
+      "description": "Small library which is able to read jax-rs annotated interfaces and create java proxies for them to then do REST calls using jax-rs client API",
+      "role": "I was originator and main developer of the library. I was managing the tasks and requirements.",
+      "technologies": ["Java", "Rest", "JAX-RS", "Groovy", "Guava", "Spock", "WireMock", "jGitFlow"],
+      "url": "https://github.com/adaptris/jaxrs-client-proxy"
+    },
+    {
+      "name": "Precisiong Ag Microservices",
+      "startDate": "2016-01-01",
+      "endDate": "Now",
+      "desciption": "Set of microsvervices - mapping, authentication, permissions, ftp",
+      "role": "Creator and manger of microservices, implementing and testing required functionality, introducing and helping other team members.",
+      "technologies": ["Java", "Spring Boot", "Spring Security", "JAX-RS", "Jersey", "oAuth 2.0", "Spock", "Groovy", "MySql", "MongoDB", "Docker"]
+    },
+    {
+      "name": "Grain Movement Tracker",
+      "startDate": "2014-02-01",
+      "endDate": "2015-03-01",
+      "description": "Project which allows to track the grain - it's movement and quality. Built with JBoss application as backedn and PHP as frontend",
+      "role": "Implementing and designing solutions for requred , managing polish team work",
+      "technologies": ["Java", "PHP", "Jboss", "CodeIgniter", "JPA", "Hibernate", "JAX-RS", "MySql", "MongoDB", "WebServices", "JAX-RS", "Cucumber"]
+    },
+    {
+      "name": "Chickens Health",
+      "startDate": "2013-10-01",
+      "endDate": "Now",
+      "description": "Web store which synchronise the data with customer backend werahouses system. It has built in CMS",
+      "role": "Improving the performance of application,... helping with analysis ",
+      "technologies": ["Java", "Struts 2.x", "Birt", "JSF", "JPA", "Hibernate", "MySql", "CSS", "JavaScript", "ANT", "Cucumber"]
+    },{
+      "name": "Farmers Store",
+      "startDate": "2013-09-01",
+      "endDate": "Now",
+      "description": "Web store which synchronise the data with customer backend werahouses system. It has built in CMS",
+      "role": "Improving the performance of application,... helping with analysis ",
+      "technologies": ["Java", "Struts 2.x", "Stripes", "Jackrabbit", "JSF", "JPA", "Hibernate", "MySql", "CSS", "JavaScript", "ANT", "WebServices"]
+    },
+    {
+      "name": "Rest Services",
+      "startDate": "2013-05-03",
+      "endDate": "2013-08-30",
+      "description": "Set of micro services (users, wallet, preference, etc.) used by media stores (music, video and game stores)",
+      "role": "Performance testing, implementation of requirements, testing other team members tasks, being a member of agile team",
+      "technologies": ["Java", "Tomcat", "JMeter", "Rest", "JAX-RS", "Apache CXF", "JPA", "Hibernate", "MySql"]
+    },
+    {
       "name": "Seeds Ordering",
       "startDate": "2012-07-01",
       "endDate": "2013-04-17",
       "description": "Application made for lead sugar beet seed manufacturer. It implements order placing and delivery management modules. Application communicates with customer SAP system.",
       "role": "Developing both ordering application and core framework used by company. Writing JavaScript components. Introduction of PHPUnit in PHP applications made by Adaptris",
-      "technologies": ["PHP", "PHPUnit", "CodeIgniter", "JavaScript", "jQuery", "Twitter Bootstrap", "Apache", "CSS", "MVC", "REST"]
+      "technologies": ["PHP", "PHPUnit", "CodeIgniter", "JavaScript", "jQuery", "Twitter Bootstrap", "Apache", "CSS", "MVC", "REST", "Cucumber"]
     },
     {
       "name": "ODT",
       "startDate": "2011-07-01",
       "endDate": "2012-06-25",
       "description": "System made for leading telecommunication company. It helps to manage data and metadata. It provides utilities to import, transform and export data to many kind of reports. It provides tools to manage data consistency checks. System also helps to create customer documentation",
-      "role": "Agile team member",
+      "role": "Agile team member...",
       "technologies": ["Java", "J2EE", "Hibernate", "JPA", "JSP", "Spring MVC 3", "Spring Security", "JavaScript", "RobotFramework", "Python",
         "jQuery", "JUnit", "HtmlUnit", "CSS", "XSLT", "Tomcat", "QueryDSL", "Maven", "Mercurial"]
     },
@@ -24,7 +80,7 @@
       "description": "System made for Polish healthcare department - helps to control blood giving and getting process",
       "role": "Responsible for medical tests section. In the further phase also gathering customer requirements, support customer and manage medical tests module. Improving the performance of whole application.",
       "technologies": ["Java", "J2EE", "Hibernate", "JSP", "Spring 2.5", "jBPM", "Struts 1.x", "JavaScript", "Ajax", "DWR",
-        "DHTML", "RDMBS", "DB2", "JUnit", "ANT", "Log4J", "XSLT", "XML", "CVS", "JBoss", "Tomcat"]
+        "DHTML", "RDMBS", "DB2", "JUnit", "ANT", "Log4J", "XSLT", "XML", "CVS", "JBoss", "Tomcat", "Birt"]
     },
     {
       "name": "Maxofon",
@@ -49,13 +105,13 @@
       "startDate": "2016-07-01",
       "endDate": "Now",
       "description": "Another - after loteria.parago.pl OCR driven application",
-      "role": "I have set upp the application and it's business logic, I'm working on OCR and image object tracking algorithms - AR. I'm also responsible for writing advanced text parsing module",
+      "role": "I have set up the application and it's business logic, I'm working on OCR and image object tracking algorithms - AR. I'm also responsible for writing advanced text parsing module",
       "technologies": ["Android", "Dagger", "Butterknife", "GreenDAO", "Firebase", "Retrofit", "Tesseract", "OpenCV", "Docker"]
     },
     {
       "name": "Photobox Downloader",
-      "startDate": "2016-09-27",
       "startDate": "2016-10-01",
+      "endDate": "2016-10-01",
       "description": "Simple web app which download all your pictures from photobox.co.uk",
       "role": "I've created this small app as there was no picture export functionality on the page and downloading all pics one by one was not acceptable",
       "url": "https://github.com/irla/photobox-downloader",
@@ -67,7 +123,7 @@
       "endDate": "2017-01-01",
       "description": "Small mobile application which ease the process of sending receipt data to https://loteriaparagonowa.gov.pl - national receipt lottery sponsored by government - scan the receipt, validate OCR read data and sent to gov web page.",
       "role": "I was responsible for image analysis, finding the text in picture analysis, before OCR image preparation and performance upgrades. I was also teaching tesseract ocr the most commons receipt fonts. Also web page set up.",
-      "technologies": ["Android", "Tesseract", "OpenCV", "Apache", "PHP"],
+      "technologies": ["Android", "Tesseract", "OpenCV", "Apache", "PHP", "MySql"],
       "url": "http://loteria.parago.pl"
     },
     {
@@ -83,7 +139,7 @@
       "endDate": "2016-02-01",
       "description": "Complex mobile and web application which simplifies home budget managament. Made by four people. Designed to make managing home budget as easy as possible.",
       "role": "I'm inventor of main idea of the application. I'm resposinble for web development - frontend and backend",
-      "technologies": ["Java", "MongoDb", "MapReduce", "Solr", "Spring Boot", "Node.js", "Backbone.js", "Marionette", "Require.js", "Underscore.js", "jQuery", "CSS", "Apache"],
+      "technologies": ["Java", "MongoDB", "MapReduce", "Solr", "Spring Boot", "Node.js", "Backbone.js", "Marionette", "Require.js", "Underscore.js", "jQuery", "CSS", "Apache"],
       "url": "http://parago.pl"
     },
     {

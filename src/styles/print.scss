@@ -1,0 +1,16 @@
+@media print {
+  .no-print {
+    display: none;
+  }
+
+  .section {
+    > small {
+      display: none;
+    }
+  }
+
+  div.print-no-break {
+    page-break-inside: avoid;
+
+  }
+}

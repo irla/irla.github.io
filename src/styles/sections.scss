@@ -21,6 +21,12 @@
   }
 }
 
+.sub-section {
+  > h3 {
+    padding-top: 0px;
+  }
+}
+
 .popover-static.sub-section {
   border: none;
 
@@ -29,6 +35,20 @@
     border-bottom-color: $secondary-color;
   }
 }
+
+.filter-container {
+  position: relative;
+
+  form {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .form-inline input.form-control {
+    width: 280px;
+  }
+}
+
 form {
   margin: 11px;
 }

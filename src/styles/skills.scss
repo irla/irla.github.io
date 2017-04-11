@@ -13,4 +13,8 @@ span.skill {
 
 .fa {
   color: $primary-color;
+
+  &.fa-smile-o {
+    margin-right: 2px;
+  }
 }

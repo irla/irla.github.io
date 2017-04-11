@@ -39,14 +39,17 @@ const Circle = ({children}) => (
 )
 
 const Year = ({year, commercials, hobby, filter}) => (
-  <Row>
-    <Col xs="6" className="timeline-left">
-      {commercials.has(year) && commercials.get(year).map((project) => <Project project={project} position="left" filter={filter}/>)}
-    </Col>
-    <Col xs="6" className="timeline-right">
-      {hobby.has(year) && hobby.get(year).map((project) => <Project project={project} position="right" filter={filter}/>)}
-    </Col>
-  </Row>
+  <div className="print-no-break">
+    <Circle>{year}</Circle>
+    <Row>
+      <Col xs="6" className="timeline-left">
+        {commercials.has(year) && commercials.get(year).map((project) => <Project project={project} position="left" filter={filter}/>)}
+      </Col>
+      <Col xs="6" className="timeline-right">
+        {hobby.has(year) && hobby.get(year).map((project) => <Project project={project} position="right" filter={filter}/>)}
+      </Col>
+    </Row>
+  </div>
 )
 
 class Projects extends Component {
@@ -78,15 +81,13 @@ class Projects extends Component {
     if (this.props.sortDir == 'desc') {
       for (let i = currYear; i > 2000; i--) {
         if (commercials.has(i) || hobby.has(i)) {
-          years.push(<Circle>{i}</Circle>)
-          years.push(<Year year={i} commercials={commercials} hobby={hobby} filter={this.props.filter}/>)
+          years.push(<Year key={'year-' + i} year={i} commercials={commercials} hobby={hobby} filter={this.props.filter}/>)
         }
       }
     } else {
       for (let i = 2000; i <= currYear; i++) {
         if (commercials.has(i) || hobby.has(i)) {
-          years.push(<Circle>{i}</Circle>)
-          years.push(<Year year={i} commercials={commercials} hobby={hobby} filter={this.props.filter}/>)
+          years.push(<Year key={'year-' + i} year={i} commercials={commercials} hobby={hobby} filter={this.props.filter}/>)
         }
       }
     }
@@ -101,7 +102,11 @@ class Projects extends Component {
           <h4>Commercial</h4>
         </Col>
         <Col xs="2" className="text-center">
-          <FontAwesome name={this.props.sortDir == 'desc' ? 'arrow-circle-up' : 'arrow-circle-down'} onClick={this.props.onChangeSort} style={{fontSize: "2.2em", cursor: "pointer"}}/>
+          <FontAwesome
+            name={this.props.sortDir == 'desc' ? 'arrow-circle-up' : 'arrow-circle-down'}
+            onClick={this.props.onChangeSort}
+            style={{fontSize: "2.2em", cursor: "pointer"}}
+            className="no-print"/>
         </Col>
         <Col xs="5">
           <h4>Hobby</h4>

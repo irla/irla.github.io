@@ -4,7 +4,9 @@ import FontAwesome from 'react-fontawesome'
 
 import '../styles/skills.scss'
 import Stars from './Stars.js'
+import Smiles from './Smiles.js'
 
+const idIt = (str) => str.replace(/\s/g, "_")
 
 class Skill extends Component {
   constructor(props) {
@@ -27,10 +29,11 @@ class Skill extends Component {
   }
   render() {
     return <span onMouseEnter={this.enter} onMouseLeave={this.leave} className="skill">
-      <Badge id={this.props.children + '_badge'} className={this.props.highlight ? "highlight" : ""}>{this.props.children}</Badge>
-      <Popover placement="bottom" isOpen={this.state.popoverOpen} target={this.props.children + '_badge'}>
+      <Badge id={idIt(this.props.children)} className={this.props.highlight ? "highlight" : ""}>{this.props.children}</Badge>
+      <Popover placement="bottom" isOpen={this.state.popoverOpen} target={idIt(this.props.children)}>
         <PopoverContent>
           <Stars score={this.props.score}/>
+          <Smiles smiles={this.props.smiles} />
           <div>{this.props.description}</div>
         </PopoverContent>
       </Popover>
@@ -49,7 +52,7 @@ class Skills extends Component {
   render() {
     const details = this.props.skill.details
     const skills = Object.keys(details).map((key) =>
-        <Skill score={details[key].score} description={details[key].info} highlight={this.highlight(key)}>{key}</Skill>
+        <Skill score={details[key].score} smiles={details[key].smiles} description={details[key].info} highlight={this.highlight(key)}>{key}</Skill>
     )
 
     return <div>

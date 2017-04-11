@@ -12,34 +12,106 @@
           "info": "Like to work with it as it is very flexible, sometimes wired and funny."
         },
         "PHP": {
-          "score": 6
+          "score": 6,
+          "info": "Sometimes the easiest and fastest to use, even I don't like it inconsistency."
         },
         "Groovy": {
-          "score": 4
+          "score": 4,
+          "info": "Although I used it mainly in spock tests (and some gradle configs) I really like the power it gives over the typical java."
         },
         "Python": {
           "score": 3,
-          "info": "I sometimes used it to quickly write some extension (e.g. for mercurial or skype) - nice to quickly prototype something"
+          "info": "I sometimes used it to quickly write some extension (e.g. for mercurial or skype) - nice to quickly prototype something."
         },
         "Scala": {
-          "score": 4
+          "score": 2,
+          "info": "Researched it few years ago and really liked the language and scala environment."
+        },
+        "SQL": {
+          "score": 8,
+          "info": "Powerful and useful - I used it for many years already."
         }
       }
     },
     {
-      "name": "Web Development",
+      "name": "Frontend Development",
+      "details": {
+        "Html": {
+          "score": 8,
+          "info": "Understanding the DOM structure and what DOM is"
+        },
+        "Css": {
+          "score": 6,
+          "info": "It's not my choice java web server but I was often working with it"
+        },
+        "Sass": {
+          "score": 6,
+          "info": "An eye opener for CSS issues, very simple and very useful same time."
+        },
+        "ES6": {
+          "score": 4,
+          "info": "Just started with it and I see the benefits over vanilla javascript."
+        },
+        "Backbone": {
+          "score": 5,
+          "info": "I like it for the level of control it gives to the developer even the cost is boilerplate code"
+        },
+        "React": {
+          "score": 4,
+          "info": "I really like the idea of creating own 'tags' (something I always valued in JSP), the way it works"
+        },
+        "Twitter Bootstrap": {
+          "score": "5",
+          "info": "I'm finally able to create a web page which looks acceptable good without loosing days to play with CSS"
+        }
+      }
+    },
+    {
+      "name": "Backend Development",
       "details": {
         "JEE": {
           "score": 6,
           "info": "I'm not a fan of the standard as it is often overcomplicated or wrongly designed (e.g. JAAS)"
         },
         "Jboss-Wildfly": {
-          "score": 3,
-          "info": "It's not my choice java web server but I was often working with it"
+          "score": 5,
+          "info": "It's not my choice java web server but I was often working with it."
         },
         "Tomcat": {
-          "score": 3,
-          "info": "Much simpler than Jboss"
+          "score": 6,
+          "info": "Much simpler than Jboss - doing it's job."
+        },
+        "Apache": {
+          "score": 5,
+          "info": "I'm able to configure vhosts for php or proxy for java web apps or modify headers."
+        },
+        "Hibernate": {
+          "score": 7,
+          "info": "I've spent many years with it and I could for example configure level 2 cache or add interceptors to monitor entity changes"
+        },
+        "Spring Environment": {
+          "score": 8,
+          "info": "I started using it 11 years ago and I'm happy it evolves all the time. Heavily used the security module."
+        },
+        "JAX-RS": {
+          "score": 8,
+          "info": "I like the standard and used it many times in many projects, I think it's well definied and fairly simple."
+        },
+        "JPA": {
+          "score": 8,
+          "info": "Another standard which is well defined and simple. Almost alwayse used it with Hibernate, just once with google BigData"
+        },
+        "Docker": {
+          "score": 4,
+          "info": "Very useful. I've not used it on Live environment yet, but I'm pretty impressed with versioning design."
+        },
+        "MySql": {
+          "score": 6,
+          "info": "I used it in many projects already but I don't feel like a dba for it"
+        },
+        "MongoDb": {
+          "score": 5,
+          "info": "I've used it in my hobby project (including MapReduce functionality) and one commercial but never used it in real production, so I'm not aware of it's weakness. But I still really like it."
         }
       }
     },
@@ -49,6 +121,50 @@
         "Dagger": {
           "score": 6,
           "info": "Small and sharp, I also use it in small java web apps - for which Spring IOC is to heavy"
+        },
+        "Butterknife": {
+          "score": 6,
+          "info": "Pretty useful and helps removes a lot of boilerplate code"
+        },
+        "Firebase": {
+          "score": 3,
+          "info": "Only started with services it provides. I researched OCR, messaging and configuration modules"
+        },
+        "GreenDAO": {
+          "score": 5,
+          "info": "I've chosen it over ORMLite solution, it's faster and simpler to use"
+        },
+        "Retrofit": {
+          "score": 4,
+          "info": "Natural choice for android rest client, I've not write to many client methods yet"
+        },
+        "EventBus": {
+          "score": 3,
+          "info": "It eased events sending and threads handling a lot"
+        }
+      }
+    },
+    {
+      "name": "Soft Skills",
+      "details": {
+        "analytic mind": {
+          "info": "Always want to understand whole systems and how they work technically and in real live, often helping BA with fixing analysis gaps. Really like to find sources of difficult bugs."
+        },
+        "creative": {
+          "info": "I like to suggest solutions and I like to create (both software and 'real' things)"
+        },
+        "learner": {
+          "info": "I really like to learn and doing it almost all the time in my free time"
+        },
+        "teacher": {
+          "info": "Always happy to introduce new people to the project, team or technology"
+        },
+        "found of challenge": {
+          "info": "Bigger challenge, bigger fun!"
+        },
+        "good sens of humour": {
+          "smiles": 5,
+          "info": "It's much better to work in happy place with happy people!"
         }
       }
     }

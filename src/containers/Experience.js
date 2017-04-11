@@ -33,8 +33,8 @@ const Education = ({education}) => (
 )
 
 const Experience = (props) => {
-  const works = props.works.map(work => (<Work work={work} />))
-  const education = props.education.map(education => (<Education education={education} />))
+  const works = props.works.map((work, index) => <Work key={'work-' + index} work={work} />)
+  const education = props.education.map((education, index) => <Education  key={'education-' + index} education={education} />)
   return <div>
     <Section title="Education">
       {education}
