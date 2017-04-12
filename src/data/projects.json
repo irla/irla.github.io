@@ -37,15 +37,15 @@
       "name": "Chickens Health",
       "startDate": "2013-10-01",
       "endDate": "Now",
-      "description": "Web store which synchronise the data with customer backend werahouses system. It has built in CMS",
-      "role": "Improving the performance of application,... helping with analysis ",
+      "description": "Struts based web application witch allows to register chicken farms medical tests, provides the CRM and advanced reporting",
+      "role": "Improving application quality, implementing required functionality, discussing the tasks and helping development team and introducing new members",
       "technologies": ["Java", "Struts 2.x", "Birt", "JSF", "JPA", "Hibernate", "MySql", "CSS", "JavaScript", "ANT", "Cucumber"]
     },{
       "name": "Farmers Store",
       "startDate": "2013-09-01",
       "endDate": "Now",
-      "description": "Web store which synchronise the data with customer backend werahouses system. It has built in CMS",
-      "role": "Improving the performance of application,... helping with analysis ",
+      "description": "Web store which synchronise the data with customer backend warehouses system. It has built in CMS",
+      "role": "Improving the performance of application, helping with requirement analysis, monitoring the tasks and introducing new members to project",
       "technologies": ["Java", "Struts 2.x", "Stripes", "Jackrabbit", "JSF", "JPA", "Hibernate", "MySql", "CSS", "JavaScript", "ANT", "WebServices"]
     },
     {
