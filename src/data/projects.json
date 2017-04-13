@@ -18,26 +18,26 @@
       "url": "https://github.com/adaptris/jaxrs-client-proxy"
     },
     {
-      "name": "Precisiong Ag Microservices",
+      "name": "Precision Ag Microservices",
       "startDate": "2016-01-01",
       "endDate": "Now",
       "desciption": "Set of microsvervices - mapping, authentication, permissions, ftp",
-      "role": "Creator and manger of microservices, implementing and testing required functionality, introducing and helping other team members.",
+      "role": "Creator and manager of microservices, implementing and testing required functionality, introducing and helping other team members.",
       "technologies": ["Java", "Spring Boot", "Spring Security", "JAX-RS", "Jersey", "oAuth 2.0", "Spock", "Groovy", "MySql", "MongoDB", "Docker"]
     },
     {
       "name": "Grain Movement Tracker",
       "startDate": "2014-02-01",
       "endDate": "2015-03-01",
-      "description": "Project which allows to track the grain - it's movement and quality. Built with JBoss application as backedn and PHP as frontend",
-      "role": "Implementing and designing solutions for requred , managing polish team work",
+      "description": "Project which allows to track the grain - it's movement and quality. Built with JBoss application as backend and PHP as frontend",
+      "role": "Implementing and designing solutions for required functionality, managing polish team work, doing estimations and helping with analysis",
       "technologies": ["Java", "PHP", "Jboss", "CodeIgniter", "JPA", "Hibernate", "JAX-RS", "MySql", "MongoDB", "WebServices", "JAX-RS", "Cucumber"]
     },
     {
-      "name": "Chickens Health",
+      "name": "Poultry Health",
       "startDate": "2013-10-01",
       "endDate": "Now",
-      "description": "Struts based web application witch allows to register chicken farms medical tests, provides the CRM and advanced reporting",
+      "description": "Struts based web application which allows to register poultry farms medical tests, provides the CRM and advanced reporting",
       "role": "Improving application quality, implementing required functionality, discussing the tasks and helping development team and introducing new members",
       "technologies": ["Java", "Struts 2.x", "Birt", "JSF", "JPA", "Hibernate", "MySql", "CSS", "JavaScript", "ANT", "Cucumber"]
     },{
@@ -113,7 +113,7 @@
       "startDate": "2016-10-01",
       "endDate": "2016-10-01",
       "description": "Simple web app which download all your pictures from photobox.co.uk",
-      "role": "I've created this small app as there was no picture export functionality on the page and downloading all pics one by one was not acceptable",
+      "role": "I've created this small app as there was no pictures export functionality on the page and downloading all pictures one by one was not acceptable",
       "url": "https://github.com/irla/photobox-downloader",
       "technologies": ["Java", "Dagger", "HtmlUnit", "Spock", "Groovy"]
     },
@@ -121,8 +121,8 @@
       "name": "loteria.parago.pl",
       "startDate": "2016-02-01",
       "endDate": "2017-01-01",
-      "description": "Small mobile application which ease the process of sending receipt data to https://loteriaparagonowa.gov.pl - national receipt lottery sponsored by government - scan the receipt, validate OCR read data and sent to gov web page.",
-      "role": "I was responsible for image analysis, finding the text in picture analysis, before OCR image preparation and performance upgrades. I was also teaching tesseract ocr the most commons receipt fonts. Also web page set up.",
+      "description": "Small mobile application which eases the process of sending receipt data to https://loteriaparagonowa.gov.pl - national receipt lottery sponsored by government - scan the receipt, validate OCR read data and sent to gov web page.",
+      "role": "I was responsible for image analysis, finding the text in picture analysis, before OCR image preparation and performance upgrades. I was also teaching tesseract ocr the most common receipt fonts. Also web page set up.",
       "technologies": ["Android", "Tesseract", "OpenCV", "Apache", "PHP", "MySql"],
       "url": "http://loteria.parago.pl"
     },

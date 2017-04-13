@@ -147,22 +147,22 @@
     {
       "name": "Soft Skills",
       "details": {
-        "analytic mind": {
+        "analytical mind": {
           "info": "Always want to understand whole systems and how they work technically and in real live, often helping BA with fixing analysis gaps. Really like to find sources of difficult bugs."
         },
         "creative": {
           "info": "I like to suggest solutions and I like to create (both software and 'real' things)"
         },
-        "learner": {
+        "fast learner": {
           "info": "I really like to learn and doing it almost all the time in my free time"
         },
-        "teacher": {
+        "mentor": {
           "info": "Always happy to introduce new people to the project, team or technology"
         },
-        "found of challenge": {
+        "relish a challenge": {
           "info": "Bigger challenge, bigger fun!"
         },
-        "good sens of humour": {
+        "good sense of humour": {
           "smiles": 5,
           "info": "It's much better to work in happy place with happy people!"
         }
