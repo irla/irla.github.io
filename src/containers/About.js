@@ -18,6 +18,7 @@ class About extends Component {
     super(props)
     this.state = {
       mail: 'ir1a.pawe1@gmai1.com',
+      mailLink: false,
       mobile: '+48 519 084 2^8'
     }
     this.updateNumber = this.updateNumber.bind(this)
@@ -28,25 +29,29 @@ class About extends Component {
   }
   updateMail() {
     let mail = this.state.mail;
-    console.log(mail)
     if (mail.indexOf('1') > -1) {
-      console.log('contains')
       mail = mail.replace('1', 'l')
-      console.log(mail)
       this.setState({mail: mail})
-      setTimeout(this.updateMail, 400)
+      setTimeout(this.updateMail, 128)
+    } else {
+      this.setState({mailLink: true})
     }
   }
   componentDidMount() {
-    setTimeout(this.updateNumber, 2000)
-    setTimeout(this.updateMail, 400)
+    setTimeout(this.updateNumber, 2048)
   }
   render() {
+    let mail = null;
+    if (this.state.mailLink) {
+      mail = <strong><a href={'mailto:' + this.state.mail}>{this.state.mail}</a></strong>
+    } else {
+      mail = <strong onMouseOver={this.updateMail}>{this.state.mail}</strong>
+    }
     return <div className="about">
       <h2>Paweł Irla</h2>
       <h5>Full Stack Developer &amp;&amp; Team leader</h5>
       <div>{years} years old | Zielona Góra | Poland</div>
-      <div>Mail: <strong>{this.state.mail}</strong> | Phone: <strong>{this.state.mobile}</strong></div>
+      <div>Mail: {mail} | Phone: <strong>{this.state.mobile}</strong></div>
     </div>
   }
 }

@@ -69,7 +69,7 @@
       "startDate": "2011-07-01",
       "endDate": "2012-06-25",
       "description": "System made for leading telecommunication company. It helps to manage data and metadata. It provides utilities to import, transform and export data to many kind of reports. It provides tools to manage data consistency checks. System also helps to create customer documentation",
-      "role": "Agile team member...",
+      "role": "Agile team member. Implementing planned tasks, taking part of scrum meetings, doing code reviews.",
       "technologies": ["Java", "J2EE", "Hibernate", "JPA", "JSP", "Spring MVC 3", "Spring Security", "JavaScript", "RobotFramework", "Python",
         "jQuery", "JUnit", "HtmlUnit", "CSS", "XSLT", "Tomcat", "QueryDSL", "Maven", "Mercurial"]
     },

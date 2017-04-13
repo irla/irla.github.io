@@ -7,8 +7,16 @@ span.skill {
   display: inline-block;
 }
 
-.badge.highlight {
+.badge {
   background-color: $highlight-color;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+
+  &.highlight {
+    background-color: $primary-color;
+    color: $highlight-font-color;
+    border: 1px solid $highlight-color;
+  }
 }
 
 .fa {

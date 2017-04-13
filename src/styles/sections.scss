@@ -27,12 +27,21 @@
   }
 }
 
-.popover-static.sub-section {
-  border: none;
+.popover-static {
+  border-color: darken($highlight-color, 10%);
 
   h3.popover-title {
-    background: none;
-    border-bottom-color: $secondary-color;
+    background: lighten($highlight-color, 3%);
+    border-color: darken($highlight-color, 10%);
+  }
+
+  &.sub-section {
+    border: none;
+
+    h3.popover-title {
+      background: none;
+      border-bottom-color: $secondary-color;
+    }
   }
 }
 
