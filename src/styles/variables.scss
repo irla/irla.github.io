@@ -1,11 +1,9 @@
-/*
-$primary-color: #636c72;
-//$secondary-color: #ebebeb;
-$secondary-color: #ffcd6e;
-$highlight-color: #f0ad4e;
-*/
 $primary-color: #1B4F72;
-//$secondary-color: #ebebeb;
 $secondary-color: #5DADE2;
 $highlight-color: #EBF5FB;
 $highlight-font-color: white;
+
+$media-big: "only screen and (min-width: 768px)";
+$media-large: "only screen and (min-width: 992px)";
+$media-small: "only screen and (max-width: 768px)";
+$media-xsmall: "only screen and (max-width: 576px)";

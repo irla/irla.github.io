@@ -7,6 +7,7 @@ import img from '../images/pawel_irla_pic.jpg'
 
 import SkillsAndInterests from './SkillsAndInterests.js'
 import Experience from './Experience.js'
+import Section from '../components/Section.js'
 import Projects from './Projects.js'
 import Filter from './Filter.js'
 import About from './About.js'
@@ -42,38 +43,44 @@ class Application extends Component {
   }
   render() {
     const projects = <Projects projects={projectData} filter={this.state.filter} onChangeSort={this.onChangeSort} sortDir={this.state.sortDir}/>
+
     const skills = <SkillsAndInterests skills={skillData.skills} interests={skillData.interests}
                           languages={skillData.languages} filter={this.state.filter} />
+
+    const jumbotron = <Row key="jumbotron" className="jumbotron">
+      <Col xs="4" md="2">
+        <img src={img} className="img-thumbnail"/>
+      </Col>
+      <Col xs="8" md="6">
+        <About />
+      </Col>
+      <Col xs="12" md="4">
+        <Section anchor="about" title="About Me">
+          Passionate about doing projects, either frontend or backend focused. Always happy to help team members and mentor junior developers. Relish a challenges.
+        </Section>
+      </Col>
+    </Row>
+
     const body = []
     if (this.state.filter) {
       body.push(
-        <Row key="projects-and-skills">
-          <Col xs="8">{projects}</Col>
-          <Col xs="4">{skills}</Col>
+        <Row key="projects-and-skills" className="filtered">
+          <Col xs="12" md="8" className="projects">{projects}</Col>
+          <Col xs="12" md="4" className="skills">{skills}</Col>
         </Row>
       )
     } else {
+      body.push(jumbotron)
       body.push(
         <Row key="experience-and-skills">
-          <Col xs="8"><Experience works={experience.work} education={experience.education}/></Col>
-          <Col xs="4">{skills}</Col>
+          <Col xs="12" md="8"><Experience works={experience.work} education={experience.education}/></Col>
+          <Col xs="12" md="4">{skills}</Col>
         </Row>
       )
       body.push(<Container key="projects-container"><Row>{projects}</Row></Container>)
     }
     return <Container>
-      <Row className="header">
-        <Col xs="2">
-          <img src={img} className="img-thumbnail"/>
-        </Col>
-        <Col xs="6">
-          <About />
-        </Col>
-        <Col xs="4" className="filter-container">
-          <Filter onFilterChange={this.onFilterChange} />
-        </Col>
-      </Row>
-      <Row><Col><hr /></Col></Row>
+      <Filter onFilterChange={this.onFilterChange} />
       {body}
     </Container>
   }

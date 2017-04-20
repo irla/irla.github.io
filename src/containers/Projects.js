@@ -42,10 +42,10 @@ const Year = ({year, commercials, hobby, filter}) => (
   <div className="print-no-break">
     <Circle>{year}</Circle>
     <Row>
-      <Col xs="6" className="timeline-left">
+      <Col xs="12" md="6" className="timeline-left">
         {commercials.has(year) && commercials.get(year).map((project) => <Project project={project} position="left" filter={filter}/>)}
       </Col>
-      <Col xs="6" className="timeline-right">
+      <Col xs="12" md="6" className="timeline-right">
         {hobby.has(year) && hobby.get(year).map((project) => <Project project={project} position="right" filter={filter}/>)}
       </Col>
     </Row>
@@ -96,7 +96,7 @@ class Projects extends Component {
       years.push(<Row><Col className="text-center">Sorry, no projects found :(</Col></Row>)
     }
 
-    return <Section className="timeline" title="Projects Timeline" info="Click arrow below to change sort direction">
+    return <Section anchor="projects" className="timeline" title="Projects Timeline" info="Click arrow below to change sort direction">
       <Row className="header">
         <Col xs="5">
           <h4>Commercial</h4>

@@ -36,10 +36,10 @@ const Experience = (props) => {
   const works = props.works.map((work, index) => <Work key={'work-' + index} work={work} />)
   const education = props.education.map((education, index) => <Education  key={'education-' + index} education={education} />)
   return <div>
-    <Section title="Education">
+    <Section anchor="education" title="Education">
       {education}
     </Section>
-    <Section title="Experience">
+    <Section anchor="experience" title="Experience">
       {works}
     </Section>
   </div>

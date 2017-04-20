@@ -4,6 +4,7 @@ import '../styles/sections.scss'
 
 const Section = (props) => (
   <div className={"section " + props.className}>
+    {props.anchor ? <a className="anchor" id={props.anchor}/> : ''}
     <Label>{props.title}</Label>
     <small>{props.info}</small>
     <hr/>

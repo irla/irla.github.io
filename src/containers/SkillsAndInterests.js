@@ -25,7 +25,7 @@ class SkillsAndInterests extends Component {
     return <div>
         <Row>
           <Col>
-            <Section title="Skills" info="Move the mouse over skill to see details">
+            <Section title="Skills" info="Move the mouse over skill to see details" className="skills">
               {skills}
             </Section>
           </Col>

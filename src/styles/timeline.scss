@@ -8,8 +8,6 @@
 }
 
 .timeline {
-  margin-top: 2em;
-
   h4 {
     text-align: center;
     font-size: 1em;
@@ -20,12 +18,15 @@
   }
 }
 
-.timeline-left.col-6 {
+.timeline-left.col-md-6 {
   padding-right: 11px;
 }
-.timeline-right.col-6 {
-  border-left: 1px dashed grey;
+.timeline-right.col-md-6 {
   padding-left: 0px;
+
+  @media  #{$media-big} {
+    border-left: 1px dashed grey;
+  }
 }
 
 .popover-footer {
@@ -45,4 +46,5 @@
     padding-top: 9px;
   }
 }
+
 

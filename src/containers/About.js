@@ -17,7 +17,7 @@ class About extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      mail: 'ir1a.pawe1@gmai1.com',
+      mail: 'irla.pawel@gmail.com',
       mailLink: false,
       mobile: '+48 519 084 2^8'
     }
@@ -28,17 +28,10 @@ class About extends Component {
     this.setState({mobile: '+48 519 084 256'})
   }
   updateMail() {
-    let mail = this.state.mail;
-    if (mail.indexOf('1') > -1) {
-      mail = mail.replace('1', 'l')
-      this.setState({mail: mail})
-      setTimeout(this.updateMail, 128)
-    } else {
-      this.setState({mailLink: true})
-    }
+    this.setState({mailLink: true})
   }
   componentDidMount() {
-    setTimeout(this.updateNumber, 2048)
+    setTimeout(this.updateNumber, 1024)
   }
   render() {
     let mail = null;
@@ -49,7 +42,7 @@ class About extends Component {
     }
     return <div className="about">
       <h2>Paweł Irla</h2>
-      <h5>Full Stack Developer &amp;&amp; Team leader</h5>
+      <h5>Full Stack Developer</h5>
       <div>{years} years old | Zielona Góra | Poland</div>
       <div>Mail: {mail} | Phone: <strong>{this.state.mobile}</strong></div>
     </div>
