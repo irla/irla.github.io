@@ -32,9 +32,9 @@ const Project = ({project, position, filter}) => {
 
 const Circle = ({children}) => (
   <Row>
-    <Col xs="5"></Col>
-    <Col xs="2" className="text-center"><Badge pill className="year-circle"><h6>{children}</h6></Badge></Col>
-    <Col xs="5" offset></Col>
+    <Col xs="4"></Col>
+    <Col xs="4" className="text-center"><Badge pill className="year-circle"><h6>{children}</h6></Badge></Col>
+    <Col xs="4" offset></Col>
   </Row>
 )
 
@@ -98,18 +98,18 @@ class Projects extends Component {
 
     return <Section anchor="projects" className="timeline" title="Projects Timeline" info="Click arrow below to change sort direction">
       <Row className="header">
-        <Col xs="5">
-          <h4>Commercial</h4>
+        <Col xs="4">
+          <h4 className="hidden-sm-down">Commercial</h4>
         </Col>
-        <Col xs="2" className="text-center">
+        <Col xs="4" className="text-center">
           <FontAwesome
             name={this.props.sortDir == 'desc' ? 'arrow-circle-up' : 'arrow-circle-down'}
             onClick={this.props.onChangeSort}
             style={{fontSize: "2.2em", cursor: "pointer"}}
-            className="no-print"/>
+            className="hidden-print"/>
         </Col>
-        <Col xs="5">
-          <h4>Hobby</h4>
+        <Col xs="4">
+          <h4 className="hidden-sm-down">Hobby</h4>
         </Col>
       </Row>
       {years}

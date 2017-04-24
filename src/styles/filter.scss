@@ -15,6 +15,12 @@ form {
     .input-group {
       width: auto;
     }
+
+    @media #{$media-small} {
+      .form-control, .input-group {
+        width: 75%;
+      }
+    }
   }
 }
 

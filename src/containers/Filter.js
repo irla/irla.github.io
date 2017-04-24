@@ -75,7 +75,7 @@ class Filter extends Component {
     }
   }
   render() {
-    return <div>
+    return <div className="hidden-print">
         <Navbar color="faded" light toggleable="sm" fixed="top">
           <Container>
             <NavbarToggler right onClick={this.toggle} />

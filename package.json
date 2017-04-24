@@ -4,7 +4,7 @@
   "description": "This is Pawel Irla CV project",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot --history-api-fallback --open",
+    "dev": "webpack-dev-server --hot --history-api-fallback --open --host 0.0.0.0",
     "prd": "webpack -p --config webpack.config.prod.js"
   },
   "repository": {

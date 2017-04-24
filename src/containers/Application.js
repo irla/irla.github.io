@@ -48,10 +48,10 @@ class Application extends Component {
                           languages={skillData.languages} filter={this.state.filter} />
 
     const jumbotron = <Row key="jumbotron" className="jumbotron">
-      <Col xs="4" md="2">
+      <Col xs="3" md="2">
         <img src={img} className="img-thumbnail"/>
       </Col>
-      <Col xs="8" md="6">
+      <Col xs="9" md="6">
         <About />
       </Col>
       <Col xs="12" md="4">
@@ -77,7 +77,7 @@ class Application extends Component {
           <Col xs="12" md="4">{skills}</Col>
         </Row>
       )
-      body.push(<Container key="projects-container"><Row>{projects}</Row></Container>)
+      body.push(<Container key="projects-container" className="page-break-before"><Row>{projects}</Row></Container>)
     }
     return <Container>
       <Filter onFilterChange={this.onFilterChange} />

@@ -20,7 +20,7 @@ const Work = ({work}) => (
 )
 
 const Education = ({education}) => (
-  <SubSection title={education.institution} info={dates.range(education.startDate, education.endDate)}>
+  <SubSection title={education.institution} info={dates.range(education.startDate, education.endDate)} className="education-section">
     <Container>
       <Row>
         <Col><h6>{education.studyType} - {education.area}</h6></Col>

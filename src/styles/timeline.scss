@@ -16,6 +16,15 @@
   .header {
     margin: 10px 0px;
   }
+
+  .info{
+    display: none;
+  }
+  @media #{$media-large} {
+    .info {
+      display: block;
+    }
+  }
 }
 
 .timeline-left.col-md-6 {
@@ -25,7 +34,7 @@
   padding-left: 0px;
 
   @media  #{$media-big} {
-    border-left: 1px dashed grey;
+    border-left: 1px dashed $primary-color;
   }
 }
 

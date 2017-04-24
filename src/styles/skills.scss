@@ -26,3 +26,19 @@ span.skill {
     margin-right: 2px;
   }
 }
+
+.skills {
+  .info, .small-info {
+    display: none;
+  }
+  @media #{$media-small} {
+    .small-info {
+      display: block;
+    }
+  }
+  @media #{$media-large} {
+    .info {
+      display: block;
+    }
+  }
+}

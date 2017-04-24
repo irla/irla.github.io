@@ -6,9 +6,12 @@ const Section = (props) => (
   <div className={"section " + props.className}>
     {props.anchor ? <a className="anchor" id={props.anchor}/> : ''}
     <Label>{props.title}</Label>
-    <small>{props.info}</small>
+    <small className="info">{props.info}</small>
+    {props.smallInfo && (<small className="small-info">{props.smallInfo}</small>)}
     <hr/>
-    {props.children}
+    <div className="section-content">
+      {props.children}
+    </div>
   </div>
 )
 

@@ -3,7 +3,7 @@ import { Button, Label  } from 'reactstrap'
 import '../styles/sections.scss'
 
 const SubSection = (props) => (
-  <div className="popover popover-static sub-section">
+  <div className={"popover popover-static sub-section " + props.className}>
     <h3 className="popover-title">
       {props.title}
       <small style={{"float": "right"}}>{props.info}</small>

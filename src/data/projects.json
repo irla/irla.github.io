@@ -23,7 +23,7 @@
       "endDate": "Now",
       "desciption": "Set of microsvervices - mapping, authentication, permissions, ftp",
       "role": "Creator and manager of microservices, implementing and testing required functionality, introducing and helping other team members.",
-      "technologies": ["Java", "Spring Boot", "Spring Security", "JAX-RS", "Jersey", "oAuth 2.0", "Spock", "Groovy", "MySql", "MongoDB", "Docker"]
+      "technologies": ["Java", "Spring Boot", "Spring Security", "JAX-RS", "Jersey", "oAuth 2.0", "Spock", "Groovy", "MySql", "MongoDB", "Docker", "Dagger"]
     },
     {
       "name": "Grain Movement Tracker",
@@ -112,7 +112,7 @@
       "name": "Photobox Downloader",
       "startDate": "2016-10-01",
       "endDate": "2016-10-01",
-      "description": "Simple web app which download all your pictures from photobox.co.uk",
+      "description": "Simple application which downloads all your pictures from photobox.co.uk",
       "role": "I've created this small app as there was no pictures export functionality on the page and downloading all pictures one by one was not acceptable",
       "url": "https://github.com/irla/photobox-downloader",
       "technologies": ["Java", "Dagger", "HtmlUnit", "Spock", "Groovy"]

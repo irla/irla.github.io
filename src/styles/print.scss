@@ -1,6 +1,8 @@
+@import 'variables';
+
 @media print {
-  .no-print {
-    display: none;
+  @page {
+    size: A3;
   }
 
   .section {
@@ -11,6 +13,13 @@
 
   div.print-no-break {
     page-break-inside: avoid;
+  }
 
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .timeline-right.col-md-6 {
+    border-left: 1px solid $highlight-color;
   }
 }

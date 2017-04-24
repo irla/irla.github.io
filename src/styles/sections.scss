@@ -19,22 +19,11 @@
     float: right;
     padding-top: 8px;
   }
-  &.skills {
-    @media #{$media-small} {
-      > small {
-        display: block;
-      }
-    }
-    @media #{$media-big} {
-      > small {
-        display: none;
-      }
-    }
-    @media #{$media-large} {
-      > small {
-        display: block;
-      }
-    }
+}
+
+.padded-section {
+  .section-content {
+    padding: 0px 19px;
   }
 }
 
@@ -75,6 +64,18 @@ $border-color: darken($highlight-color, 10%);
     h3.popover-title {
       background: none;
       border-bottom-color: $secondary-color;
+    }
+  }
+}
+
+@media #{$media-small} {
+  .education-section {
+    h3.popover-title {
+      height: 2em;
+
+      small {
+        display: block;
+      }
     }
   }
 }

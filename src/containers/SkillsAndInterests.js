@@ -25,7 +25,10 @@ class SkillsAndInterests extends Component {
     return <div>
         <Row>
           <Col>
-            <Section title="Skills" info="Move the mouse over skill to see details" className="skills">
+            <Section title="Skills"
+                     info="Move the mouse over the skill to see details"
+                     smallInfo="Tap the skill to see the details"
+                     className="skills">
               {skills}
             </Section>
           </Col>
@@ -33,14 +36,14 @@ class SkillsAndInterests extends Component {
         {!this.props.filter && [
           <Row>
             <Col>
-              <Section title="Interests">
+              <Section title="Interests" className="padded-section">
                 {interests}
               </Section>
             </Col>
           </Row>,
           <Row>
             <Col>
-              <Section title="Languages">
+              <Section title="Languages" className="padded-section">
                 {languages}
               </Section>
             </Col>
