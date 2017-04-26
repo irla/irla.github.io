@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import 'font-awesome/css/font-awesome.css'
+import 'bootstrap/scss/bootstrap.scss'
+import 'font-awesome/scss/font-awesome.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'

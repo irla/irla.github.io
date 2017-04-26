@@ -1470,6 +1470,20 @@
       "resolved": "https://registry.npmjs.org/extglob/-/extglob-0.3.2.tgz",
       "dev": true
     },
+    "extract-text-webpack-plugin": {
+      "version": "2.1.0",
+      "from": "extract-text-webpack-plugin@latest",
+      "resolved": "https://registry.npmjs.org/extract-text-webpack-plugin/-/extract-text-webpack-plugin-2.1.0.tgz",
+      "dev": true,
+      "dependencies": {
+        "loader-utils": {
+          "version": "1.1.0",
+          "from": "loader-utils@>=1.0.2 <2.0.0",
+          "resolved": "https://registry.npmjs.org/loader-utils/-/loader-utils-1.1.0.tgz",
+          "dev": true
+        }
+      }
+    },
     "extract-zip": {
       "version": "1.5.0",
       "from": "extract-zip@>=1.5.0 <1.6.0",

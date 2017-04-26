@@ -1,6 +1,12 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+
+const extractSass = new ExtractTextPlugin({
+    filename: "[name].[contenthash].css",
+    disable: process.env.NODE_ENV === "development"
+  })
 
 module.exports = {
   devtool: 'source-map',
@@ -25,22 +31,21 @@ module.exports = {
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader"},
       {
         test: /\.scss$/,
-        use: [{
-          loader: "style-loader" // creates style nodes from JS strings
-        }, {
-          loader: "css-loader" // translates CSS into CommonJS
-        }, {
-          loader: "sass-loader" // compiles Sass to CSS
-        }]
+        use: extractSass.extract({
+          use: [{
+            loader: "css-loader"
+          }, {
+            loader: "sass-loader"
+          }],
+          // use style-loader in development
+          fallback: "style-loader"
+        })
       },
       {test: /\.(jpe?g|png|gif)$/i, loader: "file-loader?name=./images/[name].[ext]"}
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './index.html',
-      inject: 'body'
-    }),
+    extractSass,
    /* new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
@@ -49,6 +54,10 @@ module.exports = {
         comments: false,
       },
     }),*/
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      inject: 'body'
+    }),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': '"production"'

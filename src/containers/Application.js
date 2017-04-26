@@ -77,7 +77,7 @@ class Application extends Component {
           <Col xs="12" md="4">{skills}</Col>
         </Row>
       )
-      body.push(<Container key="projects-container" className="page-break-before"><Row>{projects}</Row></Container>)
+      body.push(<Row><Col xs="12"><Container key="projects-container" >{projects}</Container></Col></Row>)
     }
     return <Container>
       <Filter onFilterChange={this.onFilterChange} />

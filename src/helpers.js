@@ -1,12 +1,11 @@
-const locale = 'en-EN'
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const dates = {
   short(dateStr) {
       const date = new Date(dateStr)
       if (date === "Invalid Date" || isNaN(date)) {
         return dateStr;
       }
-      const month = date.toLocaleString(locale, {month: "long"})
-      return month + ' ' + date.getFullYear()
+      return months[date.getMonth()] + ' ' + date.getFullYear()
   },
   range(fromStr, toStr) {
     const from = this.short(fromStr)
