@@ -1,12 +1,15 @@
-import React from 'react'
-import { Button, Container, Row, Col, Progress } from 'reactstrap'
-import Section from '../components/Section.js'
-import SubSection from '../components/SubSection.js'
-import Popover from '../components/StaticPopover.js'
+import React from 'react';
+import { Container, Row, Col } from 'reactstrap';
+import Section from '../components/Section';
+import SubSection from '../components/SubSection';
+import { dates } from '../helpers';
+import type { WorkDataType, EducationDataType } from '../data/types';
 
-import {dates} from '../helpers.js'
+type WorkProps = {
+  work: WorkDataType
+};
 
-const Work = ({work}) => (
+const Work = ({ work } : WorkProps) => (
   <SubSection title={work.company} info={dates.range(work.startDate, work.endDate)}>
     <Container>
       <Row>
@@ -17,9 +20,13 @@ const Work = ({work}) => (
       </Row>
     </Container>
   </SubSection>
-)
+);
 
-const Education = ({education}) => (
+type EducationProps = {
+  education: EducationDataType
+};
+
+const Education = ({ education } : EducationProps) => (
   <SubSection title={education.institution} info={dates.range(education.startDate, education.endDate)} className="education-section">
     <Container>
       <Row>
@@ -30,19 +37,24 @@ const Education = ({education}) => (
       </Row>
     </Container>
   </SubSection>
-)
+);
 
-const Experience = (props) => {
-  const works = props.works.map((work, index) => <Work key={'work-' + index} work={work} />)
-  const education = props.education.map((education, index) => <Education  key={'education-' + index} education={education} />)
-  return <div>
+type Props = {
+  works: WorkDataType[],
+  education: EducationDataType[]
+};
+
+const Experience = (props : Props) => {
+  const works = props.works.map((work, index) => <Work key={`work-${index}`} work={work} />);
+  const education = props.education.map((edu, index) => <Education key={`education-${index}`} education={edu} />);
+  return (<div>
     <Section anchor="education" title="Education">
       {education}
     </Section>
     <Section anchor="experience" title="Experience">
       {works}
     </Section>
-  </div>
-}
+  </div>);
+};
 
-export default Experience
+export default Experience;

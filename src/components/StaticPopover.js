@@ -1,18 +1,27 @@
-import React from 'react'
+// @flow
+import React from 'react';
 
-const Popover = (props) => {
-  const opposite = (props.position == "left" ? "right" : "left")
-  return <div className={"popover popover-static popover-" + props.position}>
+type Props = {
+  position: string,
+  title: string,
+  startDate: string,
+  children: any,
+  footer: any
+};
+
+const Popover = (props: Props) => {
+  const opposite = (props.position === 'left' ? 'right' : 'left');
+  return (<div className={`popover popover-static popover-${props.position}`}>
     <h4 className="popover-title">
-      <span style={{"float": props.position}}>{props.title}</span>
+      <span style={{ float: props.position }}>{props.title}</span>
       &nbsp;
-      <small style={{"float": opposite}}>{props.startDate}</small>
+      <small style={{ float: opposite }}>{props.startDate}</small>
     </h4>
     <div className="popover-content">
       {props.children}
     </div>
     <div className="popover-footer">{props.footer}</div>
-  </div>
-}
+  </div>);
+};
 
-export default Popover
+export default Popover;

@@ -18,10 +18,10 @@
       "url": "https://github.com/adaptris/jaxrs-client-proxy"
     },
     {
-      "name": "Precision Ag Microservices",
+      "name": "Precision Microservices",
       "startDate": "2016-01-01",
       "endDate": "Now",
-      "desciption": "Set of microsvervices - mapping, authentication, permissions, ftp",
+      "description": "Set of microsvervices - mapping, authentication, permissions, ftp",
       "role": "Creator and manager of microservices, implementing and testing required functionality, introducing and helping other team members.",
       "technologies": ["Java", "Spring Boot", "Spring Security", "JAX-RS", "Jersey", "oAuth 2.0", "Spock", "Groovy", "MySql", "MongoDB", "Docker", "Dagger"]
     },

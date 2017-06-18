@@ -61,7 +61,7 @@
           "info": "I really like the idea of creating own 'tags' (something I always valued in JSP) and the way the library works"
         },
         "Twitter Bootstrap": {
-          "score": "5",
+          "score": 5,
           "info": "I'm finally able to create a web page which looks acceptable good without loosing days to play with CSS"
         }
       }
@@ -184,10 +184,7 @@
   "interests": [
     {
       "name": "Programing",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
+      "keywords": []
     },
     {
       "name": "DIY",
