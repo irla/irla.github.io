@@ -1,14 +1,27 @@
 {
   "commercial": [
     {
+      "name": "Growth Backend",
+      "startDate": "2017-10-16",
+      "endDate": "Now",
+      "description": "Microservices related to user handling",
+      "role": "Developing existing and implementing new services",
+      "technologies": ["Spring Boot", "JPA", "Java 8", "RabbitMQ", "CQRS", "Docker", "A/B Tests", "Axon"]
+    },{
+      "name": "Files Gateway",
+      "startDate": "2017-07-01",
+      "endDate": "2017-10-12",
+      "description": "Small desktop application allowing to easily upload and download files from Integration Platform",
+      "role": "Main developer of application, introducing the architecture and solutions, implementing requirements.",
+      "technologies": ["ES6", "React", "Redux", "Electron", "Jest", "Flow", "Lint", "Axios", "S3"]
+    },{
       "name": "Business Integration Platform",
       "startDate": "2016-04-04",
       "endDate": "Now",
       "description": "Integration platform which allows customers to track and monitor their orders, movements or stocks by integrating their backend system.",
       "role": "Implementing required functionality, testing, helping team members, leading scrum and retrospective meetings",
       "technologies": ["Java", "JSF", "PrimeFaces", "EJB", "Wildfly", "JAX-RS", "WebServices", "Infinispan", "Docker"]
-    },
-    {
+    },{
       "name": "jaxrs-client-proxy",
       "startDate": "2016-02-06",
       "endDate": "2016-11-04",
@@ -16,8 +29,7 @@
       "role": "I was originator and main developer of the library. I was managing the tasks and requirements.",
       "technologies": ["Java", "Rest", "JAX-RS", "Groovy", "Guava", "Spock", "WireMock", "jGitFlow"],
       "url": "https://github.com/adaptris/jaxrs-client-proxy"
-    },
-    {
+    },{
       "name": "Precision Microservices",
       "startDate": "2016-01-01",
       "endDate": "Now",

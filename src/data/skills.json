@@ -49,16 +49,20 @@
           "info": "An eye opener for CSS issues, very simple and very useful same time."
         },
         "ES6": {
-          "score": 4,
-          "info": "Just started with it and I see the benefits over vanilla javascript."
+          "score": 7,
+          "info": "Not a huge experience with it, but I see a lot of benefits over vanilla javascript."
         },
         "Backbone": {
           "score": 5,
           "info": "I like it for the level of control it gives to the developer even the cost is boilerplate code"
         },
         "React": {
-          "score": 4,
+          "score": 7,
           "info": "I really like the idea of creating own 'tags' (something I always valued in JSP) and the way the library works"
+        },
+        "Redux": {
+          "score": 8,
+          "info": "Simple and powerful, although I still don't like the switch and constants for actions"
         },
         "Twitter Bootstrap": {
           "score": 5,

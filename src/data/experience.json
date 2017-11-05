@@ -1,11 +1,19 @@
 {
   "work": [
     {
+      "company": "Casumo",
+      "position": "Backend Developer",
+      "website": "https://www.casumocareers.com/",
+      "startDate": "2017-10-16",
+      "endDate": "Now",
+      "summary": "Part of Growth Hacking agile team, mainly taking care of backend systems."
+    },
+    {
       "company": "Adaptris",
       "position": "Senior Software Developer/Team Leader",
       "website": "http://adaptris.com",
       "startDate": "2012-07-01",
-      "endDate": "Now",
+      "endDate": "2017-10-12",
       "summary": "Web development, improving performance of applications, polish branch team leading, software architecture design."
     },
     {
