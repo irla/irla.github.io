@@ -1,10 +1,10 @@
 import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
-import PersonalDetails from '../components/PersonalDetails'
-import About from '../components/About'
-import { Experience, ExperienceProps } from '../components/Experience'
-import { Skills, SkillsProps } from '../components/Skills'
+import Navbar from '../sections/Navbar'
+import PersonalDetails from '../sections/PersonalDetails'
+import About from '../sections/About'
+import { Experience, ExperienceProps } from '../sections/Experience'
+import { Skills, SkillsProps } from '../sections/Skills'
 import fetch from 'cross-fetch'
 
 interface Props {
@@ -44,12 +44,20 @@ const Home: NextPage<Props> = ({experience, skills}: Props) => {
 
       <main className='px-2 sm:px-10 max-w-7xl mx-auto'>
         <div className="sm:flex">
-          <PersonalDetails />
-          <About />
+          <div className="px-2 sm:px-6 lg:px-8 md:px-1">
+            <PersonalDetails />
+          </div>
+          <div className="px-2 sm:px-6 lg:px-8 md:px-1 lg:basis-2/3 sm:basis-2/4">
+            <About />
+          </div>
         </div>
         <div className='sm:flex'>
-          <Experience work={experience.work} education={experience.education} />
-          <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests}/>
+          <div className="px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-2/3">
+            <Experience work={experience.work} education={experience.education} />
+          </div>
+          <div className="px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-1/3 sm:basis-1/3">
+            <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests}/>
+          </div>
         </div>
       </main>
 
