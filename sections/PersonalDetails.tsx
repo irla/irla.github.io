@@ -1,8 +1,11 @@
 import { MapIcon, MailIcon, PhoneIcon } from '@heroicons/react/outline'
 
-export default function PersonalDetails() {
+interface PersonalDetailsProps {
+}
+
+const PersonalDetails: React.FC<PersonalDetailsProps> = ({}) => {
     return (
-        <div className="relative flex items-center p-2">
+        <div className="flex items-center p-2">
             <img className="flex flex-col mr-3 w-36 h-36 rounded-md border-slate-300 border shadow-lg shadow-slate-300 md:mr-5" src="pawel_irla_pic.jpg" />
             <div className="flex flex-col">
                 <strong className="text-2xl">Paweł Irla</strong>
@@ -15,3 +18,5 @@ export default function PersonalDetails() {
         </div>
     )
 }
+
+export default PersonalDetails

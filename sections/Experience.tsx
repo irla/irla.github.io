@@ -36,7 +36,7 @@ export const Experience: React.FC<ExperienceProps> = (props) => {
                         <div className='block'>{educationItem.startDate} - {educationItem.endDate}</div>
                         <strong>{educationItem.studyType} - {educationItem.area}</strong>
                         {educationItem.summary.map((summaryLine: string) => {
-                            return <div className="block">{summaryLine}</div>
+                            return <div className="block" key={summaryLine}>{summaryLine}</div>
                         })}
                     </div>
                 })}

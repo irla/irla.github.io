@@ -1,11 +1,12 @@
 import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
-import Navbar from '../sections/Navbar'
+import { Navbar } from '../sections/Navbar'
 import PersonalDetails from '../sections/PersonalDetails'
 import About from '../sections/About'
 import { Experience, ExperienceProps } from '../sections/Experience'
 import { Skills, SkillsProps } from '../sections/Skills'
 import fetch from 'cross-fetch'
+import { useState } from 'react'
 
 interface Props {
   experience: ExperienceProps,
@@ -30,6 +31,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 }
 
 const Home: NextPage<Props> = ({experience, skills}: Props) => {
+  const [filter, setFilter] = useState('')
+  const filterIsBlank = (!filter || filter.trim().length == 0) as boolean
+  const hideClass = filterIsBlank ? '' : 'hidden'
+
   return (
     <div>
       <Head>
@@ -39,11 +44,11 @@ const Home: NextPage<Props> = ({experience, skills}: Props) => {
       </Head>
 
       <header>
-        <Navbar />
+        <Navbar onFilterUpdate={(value) => {setFilter(value)}}/>
       </header>
 
       <main className='px-2 sm:px-10 max-w-7xl mx-auto'>
-        <div className="sm:flex">
+        <div className={filterIsBlank ? 'sm:flex' : 'hidden'}>
           <div className="px-2 sm:px-6 lg:px-8 md:px-1">
             <PersonalDetails />
           </div>

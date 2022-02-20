@@ -1,3 +1,6 @@
+import { Pill } from '../components/Pill'
+import { Score } from '../components/Score'
+
 interface Skill {
     name: string,
     score?: number,
@@ -33,10 +36,10 @@ export const Skills: React.FC<SkillsProps> = (props) => {
                         <div className='block text-xl'>{skillGroupItem.name}</div>
                         <div>
                         {skillGroupItem.items.map(( skillItem: Skill) => {
-                            return <div className="group select-none inline-block mr-1 mb-1 px-1 text-xs border border-slate-900 rounded-md bg-slate-50 shadow-sm shadow-slate-300 hover:text-white hover:bg-slate-600">
-                                {skillItem.name}
-                                <div className="hidden absolute group-hover:block bg-slate-600 border-slate-900 rounded-md max-w-xs border mt-1 p-1 shadow-sm">{skillItem.info}</div>
-                            </div>
+                            return <Pill label={skillItem.name} key={skillItem.name}>
+                                <Score max={10} current={skillItem.score} />
+                                <div className="p-1 text-sm">{skillItem.info}</div>
+                            </Pill>
                         })}
                         </div>
                     </div>

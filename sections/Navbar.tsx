@@ -1,5 +1,6 @@
 import { Disclosure } from '@headlessui/react'
 import { SearchIcon, XCircleIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { useState } from 'react'
 
 const navigation = [
   { name: 'About', href: '#', current: true },
@@ -12,7 +13,45 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
+export interface NavbarProps {
+  onFilterUpdate: (filter: string) => void
+}
+
+export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate}) => {
+
+  const [filter, setFilterValue] = useState('')
+  const [timeoutId, setTimeoutId] = useState(0)
+
+  const blockEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if(e.key === 'Enter') {
+      e.preventDefault()
+    }
+  };
+
+  const clearSubmited = (e: React.FormEvent<HTMLButtonElement>) => {
+    setFilterValue('')
+    fireFilterChangeDelayed('', 0)
+    e.preventDefault()
+  };
+
+  const onFilterChange = (e: React.FormEvent<HTMLInputElement>) => {
+    const value = e.currentTarget.value
+    setFilterValue(value)
+    fireFilterChangeDelayed(value, 200)
+  };
+
+  const fireFilterChangeDelayed = (value: string, delay: number, scrollId : string = '') => {
+    if (timeoutId > 0) clearTimeout(timeoutId)
+    setTimeoutId(window.setTimeout(() => { onFilterUpdate(value) }, delay))
+    if (scrollId) {
+      window.setTimeout(() => {
+        const element = document.getElementById(scrollId);
+        if (element) element.scrollIntoView();
+      }, 50);
+    }
+  }
+
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -54,16 +93,15 @@ export default function Navbar() {
                 <form method="GET">
                   <div className="relative text-gray-600 focus-within:text-gray-400">
                     <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                      <button type="submit" className="p-1 focus:outline-none focus:shadow-outline">
                         <SearchIcon className="block h-5 w-5" aria-hidden="true" />
-                      </button>
                     </span>
                     <span className="absolute inset-y-0 left-48 flex items-center pl-2">
-                      <button type="submit" className="p-1 focus:outline-none focus:shadow-outline">
+                      <button type="submit" className="p-1 focus:outline-none focus:shadow-outline" onClick={clearSubmited}>
                         <XCircleIcon className="block h-5 w-5" aria-hidden="true" />
                       </button>
                     </span>
-                    <input type="search" name="q" className="py-2 text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Filter..." />
+                    <input type="search" name="q" value={filter} onKeyPress={blockEnterPress} onChange={onFilterChange}
+                      className="py-2 text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900" placeholder="Filter..." />
                   </div>
                 </form>
               </div>
