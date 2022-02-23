@@ -57,11 +57,11 @@ const Home: NextPage<Props> = ({experience, skills}: Props) => {
           </div>
         </div>
         <div className='sm:flex'>
-          <div className="px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-2/3">
+          <div className={(filterIsBlank ? '' : "hidden ") + "px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-2/3"}>
             <Experience work={experience.work} education={experience.education} />
           </div>
           <div className="px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-1/3 sm:basis-1/3">
-            <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests}/>
+            <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests} filter={filter}/>
           </div>
         </div>
       </main>
