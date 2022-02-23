@@ -49,6 +49,12 @@ export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, fil
                 })}
             </div>
             <div className="p-2 mb-3">
+                <div className='block text-2xl'>Interests</div>
+                {interests.map((interestItem: string) => {
+                    return <Pill key={interestItem} label={interestItem} highlighted={false} />
+                })}
+            </div>
+            <div className="p-2 mb-3">
                 <div className='block text-2xl'>Languages</div>
                 {languages.map((languageItem: Language) => {
                     return <div key={languageItem.name} className="py-2">

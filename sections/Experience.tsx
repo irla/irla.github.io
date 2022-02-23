@@ -1,6 +1,11 @@
 import { MapIcon, MailIcon, PhoneIcon } from '@heroicons/react/outline'
 import { type } from 'os'
 
+interface DateRange {
+    startDate: string,
+    endDate: string,
+}
+
 interface Work {
     company: string,
     position: string,
@@ -24,8 +29,15 @@ export interface ExperienceProps {
     work: Work[],
 }
 
-export const Experience: React.FC<ExperienceProps> = (props) => {
-    const {work, education} = props
+const formatDateRange = (dateRange: DateRange): string => {
+    const from = new Date(dateRange.startDate)
+    const to = new Date(dateRange.endDate)
+    const fromStr = isNaN(from.getTime()) ? dateRange.startDate : from.toLocaleString('en', { month: 'long', year: 'numeric'})
+    const toStr = isNaN(to.getTime()) ? dateRange.endDate : to.toLocaleString('en', { month: 'long', year: 'numeric'})
+    return `${fromStr} - ${toStr}`
+}
+
+export const Experience: React.FC<ExperienceProps> = ({work, education}) => {
     return (
         <div>
             <div className="p-2 mb-3">
@@ -33,7 +45,7 @@ export const Experience: React.FC<ExperienceProps> = (props) => {
                 {education.map((educationItem: Education) => {
                     return <div key={educationItem.institution} className="py-2">
                         <div className='block text-xl'>{educationItem.institution}</div>
-                        <div className='block'>{educationItem.startDate} - {educationItem.endDate}</div>
+                        <div className='block'>{formatDateRange(educationItem)}</div>
                         <strong>{educationItem.studyType} - {educationItem.area}</strong>
                         {educationItem.summary.map((summaryLine: string) => {
                             return <div className="block" key={summaryLine}>{summaryLine}</div>
@@ -46,7 +58,7 @@ export const Experience: React.FC<ExperienceProps> = (props) => {
                 {work.map((workItem: Work) => {
                     return <div key={workItem.company} className="py-2">
                         <div className='block text-xl'>{workItem.company}</div>
-                        <div className='block'>{workItem.startDate} - {workItem.endDate}</div>
+                        <div className='block'>{formatDateRange(workItem)}</div>
                         <strong>{workItem.position}</strong>
                         <div className="block">{workItem.summary}</div>
                     </div>
