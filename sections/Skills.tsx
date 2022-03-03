@@ -31,8 +31,8 @@ export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, fil
         return filter.trim().length > 0 && skillName.toLowerCase().includes(filter.toLowerCase())
     }
     return (
-        <div>
-            <div className="p-2 mb-3">
+        <div className="p-2">
+            <div>
                 <div className='block text-2xl'>Siklls</div>
                 {skills.map((skillGroupItem: SkillGroup) => {
                     return <div key={skillGroupItem.name} className="py-2">
@@ -48,17 +48,17 @@ export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, fil
                     </div>
                 })}
             </div>
-            <div className="p-2 mb-3">
+            <div className='mb-2'>
                 <div className='block text-2xl'>Interests</div>
                 {interests.map((interestItem: string) => {
-                    return <Pill key={interestItem} label={interestItem} highlighted={false} />
+                    return <Pill key={interestItem} label={interestItem} highlighted={highlighted(interestItem)} />
                 })}
             </div>
-            <div className="p-2 mb-3">
+            <div>
                 <div className='block text-2xl'>Languages</div>
                 {languages.map((languageItem: Language) => {
-                    return <div key={languageItem.name} className="py-2">
-                        <div className='block text-xl'>{languageItem.name} - {languageItem.level}</div>
+                    return <div key={languageItem.name} className="py-1">
+                        <div className='block'>{languageItem.name}<span className='float-right'>{languageItem.level}</span></div>
                     </div>
                 })}
             </div>

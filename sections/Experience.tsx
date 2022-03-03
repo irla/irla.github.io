@@ -1,10 +1,4 @@
-import { MapIcon, MailIcon, PhoneIcon } from '@heroicons/react/outline'
-import { type } from 'os'
-
-interface DateRange {
-    startDate: string,
-    endDate: string,
-}
+import { DateRange } from '../components/DateRange'
 
 interface Work {
     company: string,
@@ -29,14 +23,6 @@ export interface ExperienceProps {
     work: Work[],
 }
 
-const formatDateRange = (dateRange: DateRange): string => {
-    const from = new Date(dateRange.startDate)
-    const to = new Date(dateRange.endDate)
-    const fromStr = isNaN(from.getTime()) ? dateRange.startDate : from.toLocaleString('en', { month: 'long', year: 'numeric'})
-    const toStr = isNaN(to.getTime()) ? dateRange.endDate : to.toLocaleString('en', { month: 'long', year: 'numeric'})
-    return `${fromStr} - ${toStr}`
-}
-
 export const Experience: React.FC<ExperienceProps> = ({work, education}) => {
     return (
         <div>
@@ -45,7 +31,7 @@ export const Experience: React.FC<ExperienceProps> = ({work, education}) => {
                 {education.map((educationItem: Education) => {
                     return <div key={educationItem.institution} className="py-2">
                         <div className='block text-xl'>{educationItem.institution}</div>
-                        <div className='block'>{formatDateRange(educationItem)}</div>
+                        <DateRange from={educationItem.startDate} to={educationItem.endDate} />
                         <strong>{educationItem.studyType} - {educationItem.area}</strong>
                         {educationItem.summary.map((summaryLine: string) => {
                             return <div className="block" key={summaryLine}>{summaryLine}</div>
@@ -58,7 +44,7 @@ export const Experience: React.FC<ExperienceProps> = ({work, education}) => {
                 {work.map((workItem: Work) => {
                     return <div key={workItem.company} className="py-2">
                         <div className='block text-xl'>{workItem.company}</div>
-                        <div className='block'>{formatDateRange(workItem)}</div>
+                        <DateRange from={workItem.startDate} to={workItem.endDate} />
                         <strong>{workItem.position}</strong>
                         <div className="block">{workItem.summary}</div>
                     </div>

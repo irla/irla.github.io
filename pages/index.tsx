@@ -5,12 +5,14 @@ import PersonalDetails from '../sections/PersonalDetails'
 import About from '../sections/About'
 import { Experience, ExperienceProps } from '../sections/Experience'
 import { Skills, SkillsProps } from '../sections/Skills'
+import { Projects, ProjectsProps } from '../sections/Projects'
 import fetch from 'cross-fetch'
 import { useState } from 'react'
 
 interface Props {
   experience: ExperienceProps,
   skills: SkillsProps,
+  projects: ProjectsProps,
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -22,15 +24,18 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   res = await fetch('http://localhost:3000/api/data/skills')
   const skills = await res.json() as SkillsProps
 
+  res = await fetch('http://localhost:3000/api/data/projects')
+  const projects = await res.json() as ProjectsProps
+
 
   return {
       props: {
-          experience, skills
+          experience, skills, projects
       },
   }
 }
 
-const Home: NextPage<Props> = ({experience, skills}: Props) => {
+const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
   const [filter, setFilter] = useState('')
   const filterIsBlank = (!filter || filter.trim().length == 0) as boolean
   const hideClass = filterIsBlank ? '' : 'hidden'
@@ -63,6 +68,7 @@ const Home: NextPage<Props> = ({experience, skills}: Props) => {
           <div className="px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-1/3 sm:basis-1/3">
             <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests} filter={filter}/>
           </div>
+          <Projects commercial={projects.commercial} hobby={projects.hobby} filter={filter} />
         </div>
       </main>
 
