@@ -48,11 +48,11 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
+      <header className="print:hidden">
         <Navbar onFilterUpdate={(value) => {setFilter(value)}}/>
       </header>
 
-      <main className='px-2 sm:px-10 max-w-7xl mx-auto'>
+      <main className='px-2 print:px-0 sm:px-10 max-w-7xl mx-auto'>
         <div className={filterIsBlank ? 'sm:flex' : 'hidden'}>
           <div className="px-2 sm:px-6 lg:px-8 md:px-1">
             <PersonalDetails />
@@ -61,14 +61,16 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
             <About />
           </div>
         </div>
-        <div className='sm:flex'>
-          <div className={(filterIsBlank ? '' : "hidden ") + "px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-2/3"}>
+        <div className={"sm:flex " + (filterIsBlank ? 'sm:flex-wrap' : '')}>
+          <div className={(filterIsBlank ? '' : "hidden ") + "px-2 sm:px-6 lg:px-8 md:px-2 sm:basis-2/3"}>
             <Experience work={experience.work} education={experience.education} />
           </div>
-          <div className="px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-1/3 sm:basis-1/3">
+          <div className="px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-1/3 sm:basis-1/3 ">
             <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests} filter={filter}/>
           </div>
-          <Projects commercial={projects.commercial} hobby={projects.hobby} filter={filter} />
+          <div className={'px-2 sm:px-6 lg:px-8 md:px-2 ' + (filterIsBlank ? '' : "-order-1 sm:basis-2/3")}>
+            <Projects commercial={projects.commercial} hobby={projects.hobby} filter={filter} />
+          </div>
         </div>
       </main>
 
