@@ -191,7 +191,7 @@
       "name": "sledzeniepaczek.pl",
       "startDate": "2010-03-15",
       "endDate": "2010-09-15",
-      "description":  "A small web application that searches of packages in most popular companies. It uses HtmlUnit to wrap search results of each provider. It's hosted on Google Cloud – GAE. It also provides tracking system, which sends emails when pack state changes.",
+      "description":  "A small web application that searches of packages in most popular companies. It uses HtmlUnit to scrap search results of each provider. It's hosted on Google Cloud – GAE. It also provides tracking system, which sends emails when pack state changes.",
       "role": "Co-inventor, co-founder and co-owner of this web application. I made this application together with friend. I developed security section (It's uses AspectJ aspects to read our annotations and protect procedure calls).",
       "technologies": ["Java", "Spring IOC", "Spring MVC", "Spring Security", "GWT", "GAE", "Mvp4g", "JPA", "HtmlUnit", "AspectJ", "Eclipse"]
     },
