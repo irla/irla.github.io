@@ -24,9 +24,10 @@ export interface SkillsProps {
     languages: Language[],
     interests: string[],
     filter: string,
+    filterSetter: (value: string) => void
 }
 
-export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, filter}) => {
+export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, filter, filterSetter}) => {
     const filterIsBlank = (!filter || filter.trim().length == 0) as boolean
     const highlighted = (skillName: string): boolean => {
         return filter.trim().length > 0 && skillName.toLowerCase().includes(filter.toLowerCase())
@@ -40,7 +41,7 @@ export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, fil
                         <div className='block'>{skillGroupItem.name}</div>
                         <div>
                         {skillGroupItem.items.map(( skillItem: Skill) => {
-                            return <Pill label={skillItem.name} key={skillItem.name} highlighted={highlighted(skillItem.name)}>
+                            return <Pill label={skillItem.name} key={skillItem.name} highlighted={highlighted(skillItem.name)} onClick={filterSetter}>
                                 <Score max={10} current={skillItem.score} />
                                 <div className="p-1 text-sm">{skillItem.info}</div>
                             </Pill>

@@ -17,7 +17,7 @@
     },{
       "name": "Business Integration Platform",
       "startDate": "2016-04-04",
-      "endDate": "Now",
+      "endDate": "2017-10-11",
       "description": "Integration platform which allows customers to track and monitor their orders, movements or stocks by integrating their backend system.",
       "role": "Implementing required functionality, testing, helping team members, leading scrum and retrospective meetings",
       "technologies": ["Java", "JSF", "PrimeFaces", "EJB", "Wildfly", "JAX-RS", "WebServices", "Infinispan", "Docker"]

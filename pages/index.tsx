@@ -38,7 +38,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
   const [filter, setFilter] = useState('')
   const filterIsBlank = (!filter || filter.trim().length == 0) as boolean
-  const hideClass = filterIsBlank ? '' : 'hidden'
 
   return (
     <div>
@@ -66,7 +65,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
             <Experience work={experience.work} education={experience.education} />
           </div>
           <div className="px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-1/3 sm:basis-1/3 ">
-            <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests} filter={filter}/>
+            <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests} filter={filter} filterSetter={(value) => setFilter(value)}/>
           </div>
           <div className={'px-2 sm:px-6 lg:px-8 md:px-2 ' + (filterIsBlank ? '' : "-order-1 sm:basis-2/3")}>
             <Projects commercial={projects.commercial} hobby={projects.hobby} filter={filter} />

@@ -1,4 +1,4 @@
-import { MapIcon, MailIcon, PhoneIcon } from '@heroicons/react/outline'
+import { MapIcon, EnvelopeIcon as MailIcon, PhoneIcon } from '@heroicons/react/24/outline'
 
 interface PersonalDetailsProps {
 }

@@ -1,5 +1,5 @@
-import { StarIcon as EmtpyStar} from '@heroicons/react/outline'
-import { StarIcon as SolidStar } from '@heroicons/react/solid'
+import { StarIcon as EmtpyStar} from '@heroicons/react/24/outline'
+import { StarIcon as SolidStar } from '@heroicons/react/24/solid'
 
 interface ScoreProps {
     max: number,

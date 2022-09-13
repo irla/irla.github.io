@@ -1,5 +1,6 @@
 import { Disclosure } from '@headlessui/react'
-import { SearchIcon, XCircleIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { MagnifyingGlassIcon as SearchIcon, XCircleIcon, Bars3Icon as MenuIcon, XCircleIcon as XIcon } from '@heroicons/react/24/outline'
+
 import { useState } from 'react'
 
 const navigation = [
@@ -14,12 +15,13 @@ function classNames(...classes: string[]) {
 }
 
 export interface NavbarProps {
-  onFilterUpdate: (filter: string) => void
+  onFilterUpdate: (filter: string) => void,
+  filterValue: string,
 }
 
-export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate}) => {
+export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate, filterValue}) => {
 
-  const [filter, setFilterValue] = useState('')
+  const [filter, setFilterValue] = useState(filterValue)
   const [timeoutId, setTimeoutId] = useState(0)
 
   const blockEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
