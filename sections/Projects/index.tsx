@@ -1,7 +1,8 @@
 import { Pill } from '../../components/Pill'
 import { DateRange } from '../../components/DateRange'
+import { Project } from './Project'
 
-interface Project {
+export interface Project {
     name: string,
     startDate: string,
     endDate: string,
@@ -12,8 +13,8 @@ interface Project {
 }
 
 export interface ProjectsProps {
-    commercial: Project[],
-    hobby: Project[],
+    commercial: Array<Project>,
+    hobby: Array<Project>,
     filter: string,
 }
 
@@ -85,24 +86,32 @@ const sort = <Type,>(map: Map<number, Type>, sortDir: SortDir): Map<number, Type
     return new Map(entries)
 }
 
-const filterMatches = (filter: string, skillName: string): boolean => {
+export const filterMatches = (filter: string, skillName: string): boolean => {
     return filter != undefined && filter.trim().length > 0 && skillName.toLowerCase().includes(filter.toLowerCase())
 }
 
 export const Projects: React.FC<ProjectsProps> = (props) => {
-
-    const highlighted = (skillName: string): boolean => {
-        return filterMatches(props.filter, skillName)
-    }
 
     const grouped = groupSortAndFilter(props)
 
     return (
         <div className="p-2">
             <div className='block text-2xl'>Projects</div>
-            <div className='flex'>
-                <div className='flex-col basis-1/2'>Test 1</div>
-                <div className='flex-col basis-1/2'>Test 2</div>
+                {[... grouped].map(([year, yearOfProjects]) => {
+                    return <div className='flex flex-wrap'>
+                            <div className='basis-full flex items-center my-2'><span className='m-auto'>{year}</span></div>
+                            {[... yearOfProjects.months].map(([month, projects]) => {
+                                return <div className="basis-full flex">
+                                    <div className='flex-col basis-1/2 border-r border-dashed border-gray-900'>
+                                        <Project project={projects.commercial} type={ProjectType.COMMERCIAL} filter={props.filter}/>
+                                    </div>
+                                    <div className='flex-col basis-1/2'>
+                                        <Project project={projects.hobby} type={ProjectType.HOBBY} filter={props.filter}/>
+                                    </div>
+                                </div>
+                            })}
+                        </div>
+                })}
                 {/* <div className='sm:flex-col border-r border-gray-900 border-dashed sm:basis-1/2'>
                     {commercial.map((project: Project) => {
                         return <div key={project.name} className="py-2 mr-3 mb-3.5">
@@ -137,7 +146,6 @@ export const Projects: React.FC<ProjectsProps> = (props) => {
                         </div>
                     })}
                 </div> */}
-            </div>
         </div>
     )
 }

@@ -48,7 +48,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
       </Head>
 
       <header className="print:hidden">
-        <Navbar onFilterUpdate={(value) => {setFilter(value)}}/>
+        <Navbar onFilterUpdate={(value) => {setFilter(value)}} filterValue={filter}/>
       </header>
 
       <main className='px-2 print:px-0 sm:px-10 max-w-7xl mx-auto'>
@@ -60,7 +60,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
             <About />
           </div>
         </div>
-        <div className={"sm:flex " + (filterIsBlank ? 'sm:flex-wrap' : '')}>
+        <div className="sm:flex sm:flex-wrap">
           <div className={(filterIsBlank ? '' : "hidden ") + "px-2 sm:px-6 lg:px-8 md:px-2 sm:basis-2/3"}>
             <Experience work={experience.work} education={experience.education} />
           </div>
