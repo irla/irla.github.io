@@ -30,7 +30,7 @@
       "technologies": ["Java", "Rest", "JAX-RS", "Groovy", "Guava", "Spock", "WireMock", "jGitFlow"],
       "url": "https://github.com/adaptris/jaxrs-client-proxy"
     },{
-      "name": "Precision Microservices",
+      "name": "Precision AG Microservices",
       "startDate": "2016-01-01",
       "endDate": "Now",
       "description": "Set of microsvervices - mapping, authentication, permissions, ftp",
