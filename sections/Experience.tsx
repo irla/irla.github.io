@@ -31,7 +31,7 @@ export const Experience: React.FC<ExperienceProps> = ({work, education}) => {
                 {education.map((educationItem: Education) => {
                     return <div key={educationItem.institution} className="py-2">
                         <div className='block text-xl'>{educationItem.institution}</div>
-                        <DateRange from={educationItem.startDate} to={educationItem.endDate} />
+                        <DateRange from={educationItem.startDate} to={educationItem.endDate} size="sm" />
                         <strong>{educationItem.studyType} - {educationItem.area}</strong>
                         {educationItem.summary.map((summaryLine: string) => {
                             return <div className="block" key={summaryLine}>{summaryLine}</div>
@@ -44,7 +44,7 @@ export const Experience: React.FC<ExperienceProps> = ({work, education}) => {
                 {work.map((workItem: Work) => {
                     return <div key={workItem.company} className="py-2">
                         <div className='block text-xl'>{workItem.company}</div>
-                        <DateRange from={workItem.startDate} to={workItem.endDate} />
+                        <DateRange from={workItem.startDate} to={workItem.endDate} size="sm"/>
                         <strong>{workItem.position}</strong>
                         <div className="block">{workItem.summary}</div>
                     </div>

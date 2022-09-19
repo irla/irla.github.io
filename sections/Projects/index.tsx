@@ -103,10 +103,10 @@ export const Projects: React.FC<ProjectsProps> = (props) => {
                             {[... yearOfProjects.months].map(([month, projects]) => {
                                 return <div className="basis-full flex">
                                     <div className='flex-col basis-1/2 border-r border-dashed border-gray-900'>
-                                        <Project project={projects.commercial} type={ProjectType.COMMERCIAL} filter={props.filter}/>
+                                        <Project project={projects.commercial} left={true} filter={props.filter}/>
                                     </div>
                                     <div className='flex-col basis-1/2'>
-                                        <Project project={projects.hobby} type={ProjectType.HOBBY} filter={props.filter}/>
+                                        <Project project={projects.hobby} left={false} filter={props.filter}/>
                                     </div>
                                 </div>
                             })}
