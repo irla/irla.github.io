@@ -79,11 +79,8 @@ const sortYears = (years: Map<number, YearOfProjects>, sortDir: SortDir): Map<nu
 }
 
 const sort = <Type,>(map: Map<number, Type>, sortDir: SortDir): Map<number, Type> => {
-    let entries = [... map].sort()
-    if (sortDir == SortDir.DESC) {
-        entries = entries.reverse()
-    }
-    return new Map(entries)
+    const direction = sortDir == SortDir.ASC ? 1 : -1
+    return new Map([... map].sort((a, b) => (a[0] - b[0]) * direction))
 }
 
 export const filterMatches = (filter: string, skillName: string): boolean => {
@@ -95,7 +92,7 @@ export const Projects: React.FC<ProjectsProps> = (props) => {
     const grouped = groupSortAndFilter(props)
 
     return (
-        <div className="p-2">
+        <div className="p-1 sm:p-2">
             <div className='block text-2xl'>Projects</div>
                 {[... grouped].map(([year, yearOfProjects]) => {
                     return <div className='flex flex-wrap'>

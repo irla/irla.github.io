@@ -43,6 +43,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
     <div>
       <Head>
         <title>Paweł Irla - CV</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="CV page description" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -50,24 +51,24 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
       <header className="print:hidden">
         <Navbar onFilterUpdate={(value) => {setFilter(value)}} filterValue={filter}/>
       </header>
-
-      <main className='px-2 print:px-0 sm:px-10 max-w-7xl mx-auto'>
+      { /* px-2 sm:px-6 lg:px-8 md:px-4 */ }
+      <main className='print:px-0 max-w-7xl mx-auto'>
         <div className={filterIsBlank ? 'sm:flex' : 'hidden'}>
-          <div className="px-2 sm:px-6 lg:px-8 md:px-1">
+          <div className="">
             <PersonalDetails />
           </div>
-          <div className="px-2 sm:px-6 lg:px-8 md:px-1 lg:basis-2/3 sm:basis-2/4">
+          <div className="lg:basis-2/3 sm:basis-1/3">
             <About />
           </div>
         </div>
         <div className="sm:flex sm:flex-wrap">
-          <div className={(filterIsBlank ? '' : "hidden ") + "px-2 sm:px-6 lg:px-8 md:px-2 sm:basis-2/3"}>
+          <div className={(filterIsBlank ? '' : "hidden ") + "px-1 sm:px-6 lg:px-8 md:px-2 sm:basis-2/3"}>
             <Experience work={experience.work} education={experience.education} />
           </div>
-          <div className="px-2 sm:px-6 lg:px-8 md:px-2 lg:basis-1/3 sm:basis-1/3 ">
+          <div className="sm:px-6 lg:px-8 md:px-2 lg:basis-1/3 sm:basis-1/3 ">
             <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests} filter={filter} filterSetter={(value) => setFilter(value)}/>
           </div>
-          <div className={'px-2 sm:px-6 lg:px-8 md:px-2 ' + (filterIsBlank ? 'sm:basis-full' : "-order-1 sm:basis-2/3")}>
+          <div className={'sm:px-6 lg:px-8 md:px-2 ' + (filterIsBlank ? 'sm:basis-full' : "-order-1 sm:basis-2/3")}>
             <Projects commercial={projects.commercial} hobby={projects.hobby} filter={filter} />
           </div>
         </div>

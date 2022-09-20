@@ -25,11 +25,13 @@ describe('grouping function', () => {
     it('should sort months ascending', () => {
         const grouped = groupSortAndFilter(projectProps, SortDir.ASC)
         expect([... grouped.get(2016).months.keys()]).toEqual([0, 1, 3, 6, 9])
+        expect([... grouped.get(2013).months.keys()]).toEqual([1, 4, 8, 9, 10])
     })
 
     it('should sort months descending', () => {
         const grouped = groupSortAndFilter(projectProps, SortDir.DESC)
         expect([... grouped.get(2016).months.keys()]).toEqual([9, 6, 3, 1, 0])
+        expect([... grouped.get(2013).months.keys()]).toEqual([10, 9, 8, 4, 1])
     })
 
     it('should group months correctly', () => {
