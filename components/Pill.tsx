@@ -1,7 +1,10 @@
+import { ReactNode } from "react"
+
 interface PillProps {
     label: string,
     highlighted: boolean,
-    onClick?: (value: string) => void
+    onClick?: (value: string) => void,
+    children?: ReactNode ,
 }
 
 export const Pill: React.FC<PillProps> = ({children, label, highlighted, onClick}) => {

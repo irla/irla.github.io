@@ -26,7 +26,7 @@ export interface ExperienceProps {
 export const Experience: React.FC<ExperienceProps> = ({work, education}) => {
     return (
         <div>
-            <div className="p-2 mb-3">
+            <div className="py-2 mb-3">
                 <div className='block text-2xl'>Education</div>
                 {education.map((educationItem: Education) => {
                     return <div key={educationItem.institution} className="py-2">
@@ -39,7 +39,7 @@ export const Experience: React.FC<ExperienceProps> = ({work, education}) => {
                     </div>
                 })}
             </div>
-            <div className="p-2 mb-3">
+            <div className="py-2 mb-3">
                 <div className='block text-2xl'>Experience</div>
                 {work.map((workItem: Work) => {
                     return <div key={workItem.company} className="py-2">

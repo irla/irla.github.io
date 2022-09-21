@@ -90,59 +90,26 @@ export const filterMatches = (filter: string, skillName: string): boolean => {
 export const Projects: React.FC<ProjectsProps> = (props) => {
 
     const grouped = groupSortAndFilter(props)
+    const filtered = props.filter.trim().length > 0
 
     return (
-        <div className="p-1 sm:p-2">
+        <div className={filtered ? "sm:mr-2" : ""}>
             <div className='block text-2xl'>Projects</div>
-                {[... grouped].map(([year, yearOfProjects]) => {
-                    return <div className='flex flex-wrap'>
-                            <div className='basis-full flex items-center my-2'><span className='m-auto'>{year}</span></div>
-                            {[... yearOfProjects.months].map(([month, projects]) => {
-                                return <div className="basis-full flex">
-                                    <div className='flex-col basis-1/2 border-r border-dashed border-gray-900'>
-                                        <Project project={projects.commercial} left={true} filter={props.filter}/>
-                                    </div>
-                                    <div className='flex-col basis-1/2'>
-                                        <Project project={projects.hobby} left={false} filter={props.filter}/>
-                                    </div>
+            {[... grouped].map(([year, yearOfProjects]) => {
+                return <div className='flex flex-wrap'>
+                        <div className='basis-full flex items-center my-2'><span className='m-auto'>{year}</span></div>
+                        {[... yearOfProjects.months].map(([month, projects]) => {
+                            return <div className="basis-full flex">
+                                <div className='flex-col basis-1/2 border-r border-dashed border-gray-900 dark:border-gray-400'>
+                                    <Project project={projects.commercial} left={true} filter={props.filter}/>
                                 </div>
-                            })}
-                        </div>
-                })}
-                {/* <div className='sm:flex-col border-r border-gray-900 border-dashed sm:basis-1/2'>
-                    {commercial.map((project: Project) => {
-                        return <div key={project.name} className="py-2 mr-3 mb-3.5">
-                            <div className="flex flex-row-reverse items-center -mr-2.5">
-                                <div className="relative w-3 h-3 bg-gray-200 rounded-full -right-2 border border-gray-900"></div>
-                                <div className="relative w-5 border-b border-gray-900 -right-3 border-dashed -z-50"></div>
-                                <DateRange from={project.startDate} to={project.endDate} />
+                                <div className='flex-col basis-1/2'>
+                                    <Project project={projects.hobby} left={false} filter={props.filter}/>
+                                </div>
                             </div>
-                            <span className='block text-xl text-center'>{project.name}</span>
-                            <p>{project.description}</p>
-                            {project.technologies.map(technology => {
-                                return <Pill key={technology} label={technology} highlighted={highlighted(technology)} />
-                            })}
-                            <a href={project.url}>{project.url}</a>
-                        </div>
-                    })}
-                </div>
-                <div className='sm:flex-col sm:basis-1/2'>
-                    {hobby.map((project: Project) => {
-                        return <div key={project.name} className="py-2 ml-3 mb-3">
-                            <div className="flex flex-row items-center -ml-2.5">
-                                <div className="relative w-3 h-3 bg-gray-200 rounded-full -left-2 border border-gray-900"></div>
-                                <div className="relative w-5 border-b border-gray-900 -left-3 border-dashed -z-50"></div>
-                                <DateRange from={project.startDate} to={project.endDate} />
-                            </div>
-                            <span className='block text-xl text-center'>{project.name}</span>
-                            <p>{project.description}</p>
-                            {project.technologies.map(technology => {
-                                return <Pill key={technology} label={technology} highlighted={highlighted(technology)} />
-                            })}
-                            <a href={project.url}>{project.url}</a>
-                        </div>
-                    })}
-                </div> */}
+                        })}
+                    </div>
+            })}
         </div>
     )
 }

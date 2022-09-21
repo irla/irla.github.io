@@ -51,9 +51,8 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
       <header className="print:hidden">
         <Navbar onFilterUpdate={(value) => {setFilter(value)}} filterValue={filter}/>
       </header>
-      { /* px-2 sm:px-6 lg:px-8 md:px-4 */ }
-      <main className='print:px-0 max-w-7xl mx-auto'>
-        <div className={filterIsBlank ? 'sm:flex' : 'hidden'}>
+      <main className='print:px-0 px-1 max-w-6xl mx-auto'>
+        <div className={'py-2 ' + (filterIsBlank ? 'sm:flex' : 'hidden')}>
           <div className="">
             <PersonalDetails />
           </div>
@@ -62,13 +61,13 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
           </div>
         </div>
         <div className="sm:flex sm:flex-wrap">
-          <div className={(filterIsBlank ? '' : "hidden ") + "px-1 sm:px-6 lg:px-8 md:px-2 sm:basis-2/3"}>
+          <div className={(filterIsBlank ? '' : "hidden ") + "pr-2 sm:pr-4 lg:pr-8 md:pr-6 sm:basis-2/3"}>
             <Experience work={experience.work} education={experience.education} />
           </div>
-          <div className="sm:px-6 lg:px-8 md:px-2 lg:basis-1/3 sm:basis-1/3 ">
+          <div className="lg:basis-1/3 sm:basis-1/3 ">
             <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests} filter={filter} filterSetter={(value) => setFilter(value)}/>
           </div>
-          <div className={'sm:px-6 lg:px-8 md:px-2 ' + (filterIsBlank ? 'sm:basis-full' : "-order-1 sm:basis-2/3")}>
+          <div className={(filterIsBlank ? 'sm:basis-full' : "-order-1 sm:basis-2/3")}>
             <Projects commercial={projects.commercial} hobby={projects.hobby} filter={filter} />
           </div>
         </div>

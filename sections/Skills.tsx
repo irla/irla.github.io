@@ -32,12 +32,11 @@ export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, fil
     const highlighted = (skillName: string): boolean => {
         return filter.trim().length > 0 && skillName.toLowerCase().includes(filter.toLowerCase())
     }
-    return (
-        <div className="p-2">
+    return <div>
             <div>
                 <div className='block text-2xl'>Siklls</div>
                 {skills.map((skillGroupItem: SkillGroup) => {
-                    return <div key={skillGroupItem.name} className="py-2">
+                    return <div key={skillGroupItem.name} className="mb-2">
                         <div className='block'>{skillGroupItem.name}</div>
                         <div>
                         {skillGroupItem.items.map(( skillItem: Skill) => {
@@ -65,5 +64,4 @@ export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, fil
                 })}
             </div>
         </div>
-    )
 }
