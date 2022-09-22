@@ -1,7 +1,7 @@
 import { Disclosure } from '@headlessui/react'
 import { MagnifyingGlassIcon as SearchIcon, XCircleIcon, Bars3Icon as MenuIcon, XCircleIcon as XIcon } from '@heroicons/react/24/outline'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const navigation = [
   { name: 'About', href: '#', current: true },
@@ -53,6 +53,11 @@ export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate, filterValue}) => 
     }
   }
 
+  useEffect(() => {
+    if (filter != filterValue) {
+      setFilterValue(filterValue)
+    }
+  }, [filterValue])
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
