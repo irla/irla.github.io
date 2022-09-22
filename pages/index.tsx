@@ -6,8 +6,10 @@ import About from '../sections/About'
 import { Experience, ExperienceProps } from '../sections/Experience'
 import { Skills, SkillsProps } from '../sections/Skills'
 import { Projects, ProjectsProps } from '../sections/Projects'
-import { callAllApis } from '../lib/dataFetcher'
 import { useState } from 'react'
+import experience from './api/data/experience.json'
+import skills from './api/data/skills.json'
+import projects from './api/data/projects.json'
 
 export interface Props {
   experience: ExperienceProps,
@@ -15,8 +17,14 @@ export interface Props {
   projects: ProjectsProps,
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  return { props: await callAllApis() }
+export const getStaticProps: GetStaticProps<Props> = () => {
+  return { 
+    props: { 
+      experience: experience as ExperienceProps, 
+      skills: skills as SkillsProps,
+      projects: projects as ProjectsProps,
+    }
+  }
 }
 
 const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
