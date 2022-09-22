@@ -6,33 +6,17 @@ import About from '../sections/About'
 import { Experience, ExperienceProps } from '../sections/Experience'
 import { Skills, SkillsProps } from '../sections/Skills'
 import { Projects, ProjectsProps } from '../sections/Projects'
-import fetch from 'cross-fetch'
+import { callAllApis } from '../lib/dataFetcher'
 import { useState } from 'react'
 
-interface Props {
+export interface Props {
   experience: ExperienceProps,
   skills: SkillsProps,
   projects: ProjectsProps,
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  // I know, I know. I could just import these jsons, but I really
-  // wanted to checkout api and dynamic routing functionality
-  let res = await fetch('http://localhost:3000/api/data/experience')
-  const experience = await res.json() as ExperienceProps
-
-  res = await fetch('http://localhost:3000/api/data/skills')
-  const skills = await res.json() as SkillsProps
-
-  res = await fetch('http://localhost:3000/api/data/projects')
-  const projects = await res.json() as ProjectsProps
-
-
-  return {
-      props: {
-          experience, skills, projects
-      },
-  }
+  return { props: await callAllApis() }
 }
 
 const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
