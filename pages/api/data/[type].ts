@@ -10,7 +10,9 @@ const data = new Map<string, any>([
   ['projects', projects],
   ['skills', skills],
 ])
-
+/**
+ * This handler was only used for a moment to checkout how nextjs routing is working
+ */
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse

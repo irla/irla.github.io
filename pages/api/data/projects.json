@@ -43,7 +43,7 @@
       "endDate": "2015-03-01",
       "description": "Project which allows to track the grain - it's movement and quality. Built with JBoss application as backend and PHP as frontend",
       "role": "Implementing and designing solutions for required functionality, managing polish team work, doing estimations and helping with analysis",
-      "technologies": ["Java", "PHP", "Jboss", "CodeIgniter", "JPA", "Hibernate", "JAX-RS", "MySql", "MongoDB", "WebServices", "JAX-RS", "Cucumber"]
+      "technologies": ["Java", "PHP", "Jboss", "CodeIgniter", "JPA", "Hibernate", "MySql", "MongoDB", "WebServices", "JAX-RS", "Cucumber"]
     },
     {
       "name": "Poultry Health",

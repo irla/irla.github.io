@@ -27,6 +27,15 @@ export const getStaticProps: GetStaticProps<Props> = () => {
   }
 }
 
+
+const navigation = [
+  { name: 'About', href: '#PersonalDetails' },
+  { name: 'Experience', href: '#Experience' },
+  { name: 'Education', href: '#Education' },
+  { name: 'Projects', href: '#Projects' },
+]
+
+
 const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
   const [filter, setFilter] = useState('')
   const filterIsBlank = (!filter || filter.trim().length == 0) as boolean
@@ -41,11 +50,11 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
       </Head>
 
       <header className="print:hidden">
-        <Navbar onFilterUpdate={(value) => {setFilter(value)}} filterValue={filter}/>
+        <Navbar onFilterUpdate={(value) => {setFilter(value)}} filterValue={filter} navigation={navigation} currentPageName="about"/>
       </header>
       <main className='print:px-0 px-1 max-w-6xl mx-auto'>
         <div className={'py-2 ' + (filterIsBlank ? 'sm:flex' : 'hidden')}>
-          <div className="">
+          <div>
             <PersonalDetails />
           </div>
           <div className="lg:basis-2/3 sm:basis-1/3">
@@ -59,7 +68,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
           <div className="lg:basis-1/3 sm:basis-1/3 ">
             <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests} filter={filter} filterSetter={(value) => setFilter(value)}/>
           </div>
-          <div className={(filterIsBlank ? 'sm:basis-full' : "-order-1 sm:basis-2/3")}>
+          <div id="projects" className={(filterIsBlank ? 'sm:basis-full' : "-order-1 sm:basis-2/3")}>
             <Projects commercial={projects.commercial} hobby={projects.hobby} filter={filter} />
           </div>
         </div>

@@ -5,7 +5,7 @@ interface PersonalDetailsProps {
 
 const PersonalDetails: React.FC<PersonalDetailsProps> = ({}) => {
     return (
-        <div className="flex items-center">
+        <div id="PersonalDetails" className="flex items-center">
             <img className="flex flex-col mr-3 w-36 h-36 rounded-md border-slate-300 border shadow-lg shadow-slate-300 md:mr-5" src="pawel_irla_pic.jpg" />
             <div className="flex flex-col">
                 <strong className="text-2xl">Paweł Irla</strong>

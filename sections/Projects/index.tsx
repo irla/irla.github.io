@@ -1,6 +1,5 @@
-import { Pill } from '../../components/Pill'
-import { DateRange } from '../../components/DateRange'
 import { Project } from './Project'
+import { filterMatches } from '../../lib/filter'
 
 export interface Project {
     name: string,
@@ -83,17 +82,13 @@ const sort = <Type,>(map: Map<number, Type>, sortDir: SortDir): Map<number, Type
     return new Map([... map].sort((a, b) => (a[0] - b[0]) * direction))
 }
 
-export const filterMatches = (filter: string, skillName: string): boolean => {
-    return filter != undefined && filter.trim().length > 0 && skillName.toLowerCase().includes(filter.toLowerCase())
-}
-
 export const Projects: React.FC<ProjectsProps> = (props) => {
 
     const grouped = groupSortAndFilter(props)
     const filtered = props.filter.trim().length > 0
 
     return (
-        <div className={filtered ? "sm:mr-2" : ""}>
+        <div id="Projects" className={filtered ? "sm:mr-2" : ""}>
             <div className='block text-2xl'>Projects</div>
             {[... grouped].map(([year, yearOfProjects]) => {
                 return <div className='flex flex-wrap'>

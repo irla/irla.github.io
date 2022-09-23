@@ -1,14 +1,7 @@
 import { Disclosure } from '@headlessui/react'
-import { MagnifyingGlassIcon as SearchIcon, XCircleIcon, Bars3Icon as MenuIcon, XCircleIcon as XIcon } from '@heroicons/react/24/outline'
+import { MagnifyingGlassIcon, XCircleIcon, Bars3Icon } from '@heroicons/react/24/outline'
 
 import { useState, useEffect } from 'react'
-
-const navigation = [
-  { name: 'About', href: '#', current: true },
-  { name: 'Experience', href: '#', current: false },
-  { name: 'Education', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-]
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
@@ -17,12 +10,25 @@ function classNames(...classes: string[]) {
 export interface NavbarProps {
   onFilterUpdate: (filter: string) => void,
   filterValue: string,
+  navigation: NavigationItem[]
 }
 
-export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate, filterValue}) => {
+export interface NavigationItem {
+  name: string,
+  href: string,
+}
 
-  const [filter, setFilterValue] = useState(filterValue)
+export const Navbar: React.FC<NavbarProps> = (props => {
+
+  const [filter, setFilterValue] = useState(props.filterValue)
   const [timeoutId, setTimeoutId] = useState(0)
+  const [currentPageName, setCurrentPageName] = useState(props.navigation[0].name)
+
+  useEffect(() => {
+    if (filter != props.filterValue) {
+      setFilterValue(props.filterValue)
+    }
+  }, [props.filterValue])
 
   const blockEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if(e.key === 'Enter') {
@@ -42,22 +48,18 @@ export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate, filterValue}) => 
     fireFilterChangeDelayed(value, 200)
   };
 
-  const fireFilterChangeDelayed = (value: string, delay: number, scrollId : string = '') => {
-    if (timeoutId > 0) clearTimeout(timeoutId)
-    setTimeoutId(window.setTimeout(() => { onFilterUpdate(value) }, delay))
-    if (scrollId) {
-      window.setTimeout(() => {
-        const element = document.getElementById(scrollId);
-        if (element) element.scrollIntoView();
-      }, 50);
+  const fireFilterChangeDelayed = (value: string, delay: number) => {
+    if (timeoutId > 0) {
+      clearTimeout(timeoutId)
     }
+    setTimeoutId(window.setTimeout(() => { props.onFilterUpdate(value) }, delay))
   }
 
-  useEffect(() => {
-    if (filter != filterValue) {
-      setFilterValue(filterValue)
-    }
-  }, [filterValue])
+  const { navigation } = props
+
+  const isCurrent = (item: NavigationItem): boolean => {
+    return item.name === currentPageName
+  }
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -70,9 +72,9 @@ export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate, filterValue}) => 
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XCircleIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -84,10 +86,11 @@ export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate, filterValue}) => 
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          isCurrent(item) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        aria-current={isCurrent(item) ? 'page' : undefined}
+                        onClick={() => setCurrentPageName(item.name)}
                       >
                         {item.name}
                       </a>
@@ -100,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate, filterValue}) => 
                 <form method="GET">
                   <div className="relative text-gray-600 focus-within:text-gray-400">
                     <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                        <SearchIcon className="block h-5 w-5" aria-hidden="true" />
+                        <MagnifyingGlassIcon className="block h-5 w-5" aria-hidden="true" />
                     </span>
                     <span className="absolute inset-y-0 left-48 flex items-center pl-2">
                       <button type="submit" className="p-1 focus:outline-none focus:shadow-outline" onClick={clearSubmited}>
@@ -123,10 +126,10 @@ export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate, filterValue}) => 
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    isCurrent(item) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
-                  aria-current={item.current ? 'page' : undefined}
+                  aria-current={isCurrent(item) ? 'page' : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -137,4 +140,4 @@ export const Navbar: React.FC<NavbarProps> = ({onFilterUpdate, filterValue}) => 
       )}
     </Disclosure>
   )
-}
+})

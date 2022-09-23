@@ -1,5 +1,6 @@
 import { Pill } from '../components/Pill'
 import { Score } from '../components/Score'
+import { isNotBlank, filterMatches } from '../lib/filter'
 
 interface Skill {
     name: string,
@@ -28,10 +29,6 @@ export interface SkillsProps {
 }
 
 export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, filter, filterSetter}) => {
-    const filterIsBlank = (!filter || filter.trim().length == 0) as boolean
-    const highlighted = (skillName: string): boolean => {
-        return filter.trim().length > 0 && skillName.toLowerCase().includes(filter.toLowerCase())
-    }
     return <div>
             <div>
                 <div className='block text-2xl'>Siklls</div>
@@ -40,7 +37,7 @@ export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, fil
                         <div className='block'>{skillGroupItem.name}</div>
                         <div>
                         {skillGroupItem.items.map(( skillItem: Skill) => {
-                            return <Pill label={skillItem.name} key={skillItem.name} highlighted={highlighted(skillItem.name)} onClick={filterSetter}>
+                            return <Pill label={skillItem.name} key={skillItem.name} highlighted={filterMatches(filter, skillItem.name)} onClick={filterSetter}>
                                 <Score max={10} current={skillItem.score} />
                                 <div className="p-1 text-sm">{skillItem.info}</div>
                             </Pill>
@@ -52,10 +49,10 @@ export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, fil
             <div className='mb-2'>
                 <div className='block text-2xl'>Interests</div>
                 {interests.map((interestItem: string) => {
-                    return <Pill key={interestItem} label={interestItem} highlighted={highlighted(interestItem)} />
+                    return <Pill key={interestItem} label={interestItem} highlighted={filterMatches(filter, interestItem)} />
                 })}
             </div>
-            <div className={filterIsBlank ? '' : 'hidden'}>
+            <div className={isNotBlank(filter) ? 'hidden' : ''}>
                 <div className='block text-2xl'>Languages</div>
                 {languages.map((languageItem: Language) => {
                     return <div key={languageItem.name} className="py-1">
