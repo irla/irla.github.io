@@ -50,7 +50,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
       </Head>
 
       <header className="print:hidden">
-        <Navbar onFilterUpdate={(value) => {setFilter(value)}} filterValue={filter} navigation={navigation} currentPageName="about"/>
+        <Navbar onFilterUpdate={(value) => {setFilter(value)}} filterValue={filter} navigation={navigation} />
       </header>
       <main className='print:px-0 px-1 max-w-6xl mx-auto'>
         <div className={'py-2 ' + (filterIsBlank ? 'sm:flex' : 'hidden')}>
