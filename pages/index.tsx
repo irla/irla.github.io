@@ -10,6 +10,7 @@ import { useState } from 'react'
 import experience from './api/data/experience.json'
 import skills from './api/data/skills.json'
 import projects from './api/data/projects.json'
+import { isNotBlank } from '../lib/filter'
 
 export interface Props {
   experience: ExperienceProps,
@@ -27,19 +28,16 @@ export const getStaticProps: GetStaticProps<Props> = () => {
   }
 }
 
-
 const navigation = [
   { name: 'About', href: '#PersonalDetails' },
-  { name: 'Experience', href: '#Experience' },
-  { name: 'Skills', href: '#Skills' },
+  { name: 'Skills & Experience', href: '#Skills' },
   { name: 'Education', href: '#Education' },
   { name: 'Projects', href: '#Projects' },
 ]
 
-
 const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
   const [filter, setFilter] = useState('')
-  const filterIsBlank = (!filter || filter.trim().length == 0) as boolean
+  const filterIsBlank = !isNotBlank(filter)
 
   return (
     <div className='scroll-pt-40'>
@@ -55,10 +53,10 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
       </header>
       <main className='print:px-0 px-1 max-w-6xl mx-auto pt-16'>
         <div className={'py-2 ' + (filterIsBlank ? 'sm:flex' : 'hidden')}>
-          <div>
+          <div className='sm:basis-2/3'>
             <PersonalDetails />
           </div>
-          <div className="lg:basis-2/3 sm:basis-1/3">
+          <div className="sm:basis-1/3">
             <About />
           </div>
         </div>
@@ -66,7 +64,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
           <div className={(filterIsBlank ? '' : "hidden ") + "pr-2 sm:pr-4 lg:pr-8 md:pr-6 sm:basis-2/3"}>
             <Experience work={experience.work} education={experience.education} />
           </div>
-          <div className="lg:basis-1/3 sm:basis-1/3 ">
+          <div className="sm:basis-1/3 ">
             <Skills skills={skills.skills} languages={skills.languages} interests={skills.interests} filter={filter} filterSetter={(value) => setFilter(value)}/>
           </div>
           <div id="projects" className={(filterIsBlank ? 'sm:basis-full' : "-order-1 sm:basis-2/3")}>

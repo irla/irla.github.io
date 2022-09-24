@@ -91,7 +91,7 @@ export const Projects: React.FC<ProjectsProps> = (props) => {
         <div id="Projects" className={filtered ? "sm:mr-2" : ""}>
             <div className='block text-2xl'>Projects</div>
             {[... grouped].map(([year, yearOfProjects]) => {
-                return <div className='flex flex-wrap'>
+                return <div key={year} className='flex flex-wrap'>
                         <div className='basis-full flex items-center my-2'><span className='m-auto'>{year}</span></div>
                         {[... yearOfProjects.months].map(([month, projects]) => {
                             return <div className="basis-full flex flex-wrap sm:flex-nowrap">
