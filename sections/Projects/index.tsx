@@ -94,11 +94,11 @@ export const Projects: React.FC<ProjectsProps> = (props) => {
                 return <div className='flex flex-wrap'>
                         <div className='basis-full flex items-center my-2'><span className='m-auto'>{year}</span></div>
                         {[... yearOfProjects.months].map(([month, projects]) => {
-                            return <div className="basis-full flex">
-                                <div className='flex-col basis-1/2 border-r border-dashed border-gray-900 dark:border-gray-400'>
+                            return <div className="basis-full flex flex-wrap sm:flex-nowrap">
+                                <div className='flex-row basis-full sm:flex-col sm:basis-1/2 sm:border-r sm:border-dashed sm:border-gray-900 sm:dark:border-gray-400'>
                                     <Project project={projects.commercial} left={true} filter={props.filter}/>
                                 </div>
-                                <div className='flex-col basis-1/2'>
+                                <div className='flex-row basis-full sm:flex-col sm:basis-1/2'>
                                     <Project project={projects.hobby} left={false} filter={props.filter}/>
                                 </div>
                             </div>

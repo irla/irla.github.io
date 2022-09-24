@@ -31,6 +31,7 @@ export const getStaticProps: GetStaticProps<Props> = () => {
 const navigation = [
   { name: 'About', href: '#PersonalDetails' },
   { name: 'Experience', href: '#Experience' },
+  { name: 'Skills', href: '#Skills' },
   { name: 'Education', href: '#Education' },
   { name: 'Projects', href: '#Projects' },
 ]
@@ -41,7 +42,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
   const filterIsBlank = (!filter || filter.trim().length == 0) as boolean
 
   return (
-    <div>
+    <div className='scroll-pt-40'>
       <Head>
         <title>Paweł Irla - CV</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -49,10 +50,10 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className="print:hidden">
+      <header className="print:hidden fixed min-w-full z-50">
         <Navbar onFilterUpdate={(value) => {setFilter(value)}} filterValue={filter} navigation={navigation} />
       </header>
-      <main className='print:px-0 px-1 max-w-6xl mx-auto'>
+      <main className='print:px-0 px-1 max-w-6xl mx-auto pt-16'>
         <div className={'py-2 ' + (filterIsBlank ? 'sm:flex' : 'hidden')}>
           <div>
             <PersonalDetails />

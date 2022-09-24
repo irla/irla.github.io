@@ -30,8 +30,8 @@ export interface SkillsProps {
 
 export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, filter, filterSetter}) => {
     return <div>
-            <div>
-                <div className='block text-2xl'>Siklls</div>
+            <div className="pt-2">
+                <div id="Skills" className='block text-2xl'>Skills</div>
                 {skills.map((skillGroupItem: SkillGroup) => {
                     return <div key={skillGroupItem.name} className="mb-2">
                         <div className='block'>{skillGroupItem.name}</div>
