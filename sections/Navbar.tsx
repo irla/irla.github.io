@@ -110,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = (props => {
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XCircleIcon className="block h-6 w-6" aria-hidden="true" />
@@ -172,7 +172,7 @@ export const Navbar: React.FC<NavbarProps> = (props => {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    isCurrent(item) ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    isCurrent(item) ? 'bg-gray-400 text-gray-900' : 'text-gray-900 hover:bg-gray-700 hover:text-white',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={isCurrent(item) ? 'page' : undefined}

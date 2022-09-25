@@ -55,8 +55,8 @@ export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, fil
             <div className={isNotBlank(filter) ? 'hidden' : ''}>
                 <div className='block text-2xl'>Languages</div>
                 {languages.map((languageItem: Language) => {
-                    return <div key={languageItem.name} className="py-1">
-                        <div className='block'>{languageItem.name}<span className='float-right'>{languageItem.level}</span></div>
+                    return <div key={languageItem.name}>
+                        <div className='block'>{languageItem.name} - <span>{languageItem.level}</span></div>
                     </div>
                 })}
             </div>

@@ -4,9 +4,16 @@
 
 @page {
     size: auto;   /* auto is the initial value */
-    margin: 2pt 0pt;  /* this affects the margin in the printer settings */
+    margin: 2pt;  /* this affects the margin in the printer settings */
 }
 
 html {
     scroll-padding-top: 4rem;
+}
+
+@media print {
+    html {
+        scroll-padding-top: 1pt;
+        
+    }
 }

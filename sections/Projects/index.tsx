@@ -1,5 +1,7 @@
 import { Project } from './Project'
-import { filterMatches } from '../../lib/filter'
+import { filterMatches, isNotBlank } from '../../lib/filter'
+import { useState } from 'react'
+import { ArrowDownCircleIcon, ArrowUpCircleIcon } from '@heroicons/react/24/outline'
 
 export interface Project {
     name: string,
@@ -35,10 +37,8 @@ export interface MonthOfProjects extends Partial<Record<ProjectType, Project>> {
 
 export const groupSortAndFilter = (projects: ProjectsProps, sortDir: SortDir = SortDir.DESC): Map<number, YearOfProjects> => {
     let years = new Map<number, YearOfProjects>()
-    let filter = projects.filter
-    let commercial = projects.commercial
-    let hobby = projects.hobby
-    if (filter && filter.trim().length > 0) {
+    let {filter, commercial, hobby} = projects
+    if (isNotBlank(filter)) {
         commercial = commercial.filter(project => project.technologies.some(skill => filterMatches(filter, skill)))
         hobby = hobby.filter(project => project.technologies.some(skill => filterMatches(filter, skill)))
     }
@@ -83,15 +83,25 @@ const sort = <Type,>(map: Map<number, Type>, sortDir: SortDir): Map<number, Type
 }
 
 export const Projects: React.FC<ProjectsProps> = (props) => {
+    const [sortDir, setSortDir] = useState(SortDir.DESC)
 
-    const grouped = groupSortAndFilter(props)
+    const grouped = groupSortAndFilter(props, sortDir)
     const filtered = props.filter.trim().length > 0
 
+    const sorter = sortDir == SortDir.DESC
+        ? <ArrowDownCircleIcon onClick={() => setSortDir(SortDir.ASC)}/>
+        : <ArrowUpCircleIcon onClick={() => setSortDir(SortDir.DESC)}/>
+
     return (
-        <div id="Projects" className={filtered ? "sm:mr-2" : ""}>
-            <div className='block text-2xl'>Projects</div>
+        <div id="Projects" className={" " + (filtered ? "sm:mr-2" : "")}>
+            <div className='text-2xl sm:basis-full'>Projects</div>
+            <div className='sm:print:hidden flex flex-row-reverse sm:flex-row gap-x-2 basis-full items-center'>
+                <div className='basis-0 grow text-right'>Commercial</div>
+                <div className='w-6 h-6 cursor-pointer'>{sorter}</div>
+                <div className='basis-0 grow'>Hobby</div>
+            </div>
             {[... grouped].map(([year, yearOfProjects]) => {
-                return <div key={year} className='flex flex-wrap'>
+                return <div key={year} className='basis-full flex flex-wrap'>
                         <div className='basis-full flex items-center my-2'><span className='m-auto'>{year}</span></div>
                         {[... yearOfProjects.months].map(([month, projects]) => {
                             return <div className="basis-full flex flex-wrap sm:flex-nowrap">

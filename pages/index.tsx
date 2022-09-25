@@ -40,7 +40,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
   const filterIsBlank = !isNotBlank(filter)
 
   return (
-    <div className='scroll-pt-40'>
+    <div>
       <Head>
         <title>Paweł Irla - CV</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,7 +51,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
       <header className="print:hidden fixed min-w-full z-50">
         <Navbar onFilterUpdate={(value) => {setFilter(value)}} filterValue={filter} navigation={navigation} />
       </header>
-      <main className='print:px-0 px-1 max-w-6xl mx-auto pt-16'>
+      <main className='print:px-0 px-1 max-w-6xl mx-auto pt-16 print:pt-1'>
         <div className={'py-2 ' + (filterIsBlank ? 'sm:flex' : 'hidden')}>
           <div className='sm:basis-2/3'>
             <PersonalDetails />
