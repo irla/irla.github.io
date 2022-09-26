@@ -4,7 +4,7 @@
 
 @page {
     size: auto;   /* auto is the initial value */
-    margin: 2pt;  /* this affects the margin in the printer settings */
+    margin: 1pt;  /* this affects the margin in the printer settings */
 }
 
 html {
@@ -14,6 +14,10 @@ html {
 @media print {
     html {
         scroll-padding-top: 1pt;
-        
+        padding: 14pt;
+    }
+
+    #Projects {
+        page-break-before: always;
     }
 }
