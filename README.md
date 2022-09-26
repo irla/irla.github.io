@@ -1,3 +1,4 @@
-# React source of https://irla.github.io
 
-If you wish to use it, just clone it and do your changes. More description soon...
+# CV page with next.js
+
+Simply an interactive CV page.

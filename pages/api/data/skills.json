@@ -1,0 +1,227 @@
+{
+  "skills": [
+    {
+      "name": "Programing languages",
+      "items": [
+        {
+          "name": "Java",
+          "score": 9,
+          "info": "My favorite language and the one I most often work with. I like it for its consistency and stability."
+        },
+        {
+          "name": "JavaScript",
+          "score": 8,
+          "info": "Like to work with it as it is very flexible, sometimes wired and funny."
+        },
+        {
+          "name": "PHP",
+          "score": 6,
+          "info": "Sometimes the easiest and fastest to use, even I don't like its inconsistency."
+        },
+        {
+          "name": "Groovy",
+          "score": 4,
+          "info": "Although I used it mainly in spock tests (and some gradle configs) I really like the power it gives over the typical java."
+        },
+        {
+          "name": "Python",
+          "score": 3,
+          "info": "I sometimes used it to quickly write some extension (e.g. for mercurial or skype) - nice to quickly prototype something."
+        },
+        {
+          "name": "Scala",
+          "score": 2,
+          "info": "Researched it few years ago and really liked the language and scala environment."
+        },
+        {
+          "name": "SQL",
+          "score": 8,
+          "info": "Powerful and useful - I used it for many years already."
+        }
+      ]
+    },
+    {
+      "name": "Frontend Development",
+      "items": [
+        {
+          "name": "Html",
+          "score": 8,
+          "info": "Understanding the DOM structure and what DOM is, used HTML for about 15 years now"
+        },
+        {
+          "name": "CSS",
+          "score": 5,
+          "info": "I know how to use and tweak it :)"
+        },
+        {
+          "name": "Sass",
+          "score": 6,
+          "info": "An eye opener for CSS issues, very simple and very useful same time."
+        },
+        {
+          "name": "ES6",
+          "score": 7,
+          "info": "Not a huge experience with it, but I see a lot of benefits over vanilla javascript."
+        },
+        {
+          "name": "Backbone",
+          "score": 5,
+          "info": "I like it for the level of control it gives to the developer even the cost is boilerplate code"
+        },
+        {
+          "name": "React",
+          "score": 7,
+          "info": "I really like the idea of creating own 'tags' (something I always valued in JSP) and the way the library works"
+        },
+        {
+          "name": "Redux",
+          "score": 8,
+          "info": "Simple and powerful, although I still don't like the switch and constants for actions"
+        },
+        {
+          "name": "Twitter Bootstrap",
+          "score": 5,
+          "info": "I'm finally able to create a web page which looks acceptable good without loosing days to play with CSS"
+        }
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "items": [
+        {
+          "name": "JEE",
+          "score": 6,
+          "info": "I'm not a fan of the standard as it is often overcomplicated or wrongly designed (e.g. JAAS)"
+        },
+        {
+          "name": "Jboss-Wildfly",
+          "score": 5,
+          "info": "It's not my choice java web server but I was often working with it."
+        },
+        {
+          "name": "Tomcat",
+          "score": 6,
+          "info": "Much simpler than Jboss - doing it's job."
+        },
+        {
+          "name": "Apache",
+          "score": 5,
+          "info": "I'm able to configure vhosts for php or proxy for java web apps or modify headers."
+        },
+        {
+          "name": "Hibernate",
+          "score": 7,
+          "info": "I've spent many years with it and I could for example configure level 2 cache or add interceptors to monitor entity changes"
+        },
+        {
+          "name": "Spring Environment",
+          "score": 8,
+          "info": "I started using it 11 years ago and I'm happy it evolves all the time. Heavily used the security module."
+        },
+        {
+          "name": "JAX-RS",
+          "score": 8,
+          "info": "I like the standard and used it many times in many projects, I think it's well definied and fairly simple."
+        },
+        {
+          "name": "JPA",
+          "score": 8,
+          "info": "Another standard which is well defined and simple. Almost alwayse used it with Hibernate, just once with google BigData"
+        },
+        {
+          "name": "Docker",
+          "score": 4,
+          "info": "Very useful. I've not used it on Live environment yet, but I'm pretty impressed with versioning design."
+        },
+        {
+          "name": "MySql",
+          "score": 6,
+          "info": "I used it in many projects already but I don't feel like a dba for it"
+        },
+        {
+          "name": "MongoDb",
+          "score": 5,
+          "info": "I've used it in my hobby project (including MapReduce functionality) and one commercial but never used it in real production, so I'm not aware of it's weakness. But I still really like it."
+        }
+      ]
+    },
+    {
+      "name": "Mobile Development",
+      "items": [
+        {
+          "name": "Dagger",
+          "score": 6,
+          "info": "Small and sharp, I also use it in small java web apps - for which Spring IOC is to heavy"
+        },
+        {
+          "name": "Butterknife",
+          "score": 6,
+          "info": "Pretty useful and helps removes a lot of boilerplate code"
+        },
+        {
+          "name": "Firebase",
+          "score": 3,
+          "info": "Only started with services it provides. I researched OCR, messaging and configuration modules"
+        },
+        {
+          "name": "GreenDAO",
+          "score": 5,
+          "info": "I've chosen it over ORMLite solution, it's faster and simpler to use"
+        },
+        {
+          "name": "Retrofit",
+          "score": 4,
+          "info": "Natural choice for android rest client, I've not write to many client methods yet"
+        },
+        {
+          "name": "EventBus",
+          "score": 3,
+          "info": "It eased events sending and threads handling a lot"
+        }
+      ]
+    },
+    {
+      "name": "Soft Skills",
+      "items": [
+        {
+          "name": "analytical mind",
+          "info": "Always want to understand whole systems and how they work technically and in real live, often helping BA with fixing analysis gaps. Really like to find sources of difficult bugs."
+        },
+        {
+          "name": "creative",
+          "info": "I like to suggest solutions and I like to create (both software and 'real' things)"
+        },
+        {
+          "name": "fast learner",
+          "info": "I really like to learn and doing it almost all the time in my free time"
+        },
+        {
+          "name": "mentor",
+          "info": "Always happy to introduce new people to the project, team or technology"
+        },
+        {
+          "name": "relish a challenge",
+          "info": "Bigger challenge, bigger fun!"
+        },
+        {
+          "name": "good sense of humour",
+          "smiles": 5,
+          "info": "It's much better to work in happy place with happy people!"
+        }
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Very good",
+      "score": 8
+    },
+    {
+      "name": "Polish",
+      "level": "Native",
+      "score": 10
+    }
+  ],
+  "interests": [ "Programming", "DIY", "garden works", "electronics" ]
+}
