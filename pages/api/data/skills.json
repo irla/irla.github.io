@@ -6,7 +6,12 @@
         {
           "name": "Java",
           "score": 9,
-          "info": "My favorite language and the one I most often work with. I like it for its consistency and stability."
+          "info": "The one I most often work with. I like it for its consistency and stability."
+        },
+        {
+          "name": "Kotlin",
+          "score": 9,
+          "info": "My language of choice."
         },
         {
           "name": "JavaScript",
@@ -14,9 +19,9 @@
           "info": "Like to work with it as it is very flexible, sometimes wired and funny."
         },
         {
-          "name": "PHP",
-          "score": 6,
-          "info": "Sometimes the easiest and fastest to use, even I don't like its inconsistency."
+          "name": "TypeScript",
+          "score": 8,
+          "info": "Like to work with it as it is very flexible, sometimes wired and funny."
         },
         {
           "name": "Groovy",
@@ -29,14 +34,69 @@
           "info": "I sometimes used it to quickly write some extension (e.g. for mercurial or skype) - nice to quickly prototype something."
         },
         {
-          "name": "Scala",
-          "score": 2,
-          "info": "Researched it few years ago and really liked the language and scala environment."
+          "name": "PHP",
+          "score": 6,
+          "info": "Sometimes the easiest and fastest to use, even I don't like its inconsistency."
         },
         {
           "name": "SQL",
           "score": 8,
           "info": "Powerful and useful - I used it for many years already."
+        }
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "items": [
+        {
+          "name": "Spring Environment",
+          "score": 8,
+          "info": "I started using it 11 years ago and I'm happy it evolves all the time. Heavily used the security module."
+        },
+        {
+          "name": "Jdbi",
+          "score": 8,
+          "info": "Another standard which is well defined and simple. Almost alwayse used it with Hibernate, just once with google BigData"
+        },
+        {
+          "name": "JPA",
+          "score": 8,
+          "info": "Another standard which is well defined and simple. Almost alwayse used it with Hibernate, just once with google BigData"
+        },
+        {
+          "name": "Hibernate",
+          "score": 7,
+          "info": "I've spent many years with it and I could for example configure level 2 cache or add interceptors to monitor entity changes"
+        },
+        {
+          "name": "Docker",
+          "score": 4,
+          "info": "Very useful. I've not used it on Live environment yet, but I'm pretty impressed with versioning design."
+        },
+        {
+          "name": "k8s",
+          "score": 4,
+          "info": "Very useful. I've not used it on Live environment yet, but I'm pretty impressed with versioning design."
+        },
+        {
+          "name": "AWS",
+          "score": 4,
+          "info": "Very useful. I've not used it on Live environment yet, but I'm pretty impressed with versioning design."
+        },
+        {
+          "name": "GCP",
+          "score": 4,
+          "info": "Very useful. I've not used it on Live environment yet, but I'm pretty impressed with versioning design."
+        },
+        {
+          "name": "MySql",
+          "score": 6,
+          "info": "I used it in many projects already but I don't feel like a dba for it"
+        },
+        {
+          "name": "MongoDb",
+          "score": 5,
+          "info": "I've used it in my hobby project (including MapReduce functionality) and one commercial but never used it in real production, so I'm not aware of it's weakness. But I still really like it."
         }
       ]
     },
@@ -79,69 +139,9 @@
           "info": "Simple and powerful, although I still don't like the switch and constants for actions"
         },
         {
-          "name": "Twitter Bootstrap",
+          "name": "Tailwindcss",
           "score": 5,
           "info": "I'm finally able to create a web page which looks acceptable good without loosing days to play with CSS"
-        }
-      ]
-    },
-    {
-      "name": "Backend Development",
-      "items": [
-        {
-          "name": "JEE",
-          "score": 6,
-          "info": "I'm not a fan of the standard as it is often overcomplicated or wrongly designed (e.g. JAAS)"
-        },
-        {
-          "name": "Jboss-Wildfly",
-          "score": 5,
-          "info": "It's not my choice java web server but I was often working with it."
-        },
-        {
-          "name": "Tomcat",
-          "score": 6,
-          "info": "Much simpler than Jboss - doing it's job."
-        },
-        {
-          "name": "Apache",
-          "score": 5,
-          "info": "I'm able to configure vhosts for php or proxy for java web apps or modify headers."
-        },
-        {
-          "name": "Hibernate",
-          "score": 7,
-          "info": "I've spent many years with it and I could for example configure level 2 cache or add interceptors to monitor entity changes"
-        },
-        {
-          "name": "Spring Environment",
-          "score": 8,
-          "info": "I started using it 11 years ago and I'm happy it evolves all the time. Heavily used the security module."
-        },
-        {
-          "name": "JAX-RS",
-          "score": 8,
-          "info": "I like the standard and used it many times in many projects, I think it's well definied and fairly simple."
-        },
-        {
-          "name": "JPA",
-          "score": 8,
-          "info": "Another standard which is well defined and simple. Almost alwayse used it with Hibernate, just once with google BigData"
-        },
-        {
-          "name": "Docker",
-          "score": 4,
-          "info": "Very useful. I've not used it on Live environment yet, but I'm pretty impressed with versioning design."
-        },
-        {
-          "name": "MySql",
-          "score": 6,
-          "info": "I used it in many projects already but I don't feel like a dba for it"
-        },
-        {
-          "name": "MongoDb",
-          "score": 5,
-          "info": "I've used it in my hobby project (including MapReduce functionality) and one commercial but never used it in real production, so I'm not aware of it's weakness. But I still really like it."
         }
       ]
     },
