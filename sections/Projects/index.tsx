@@ -95,9 +95,9 @@ export const Projects: React.FC<ProjectsProps> = (props) => {
     return (
         <div id="Projects" className={" " + (filtered ? "sm:mr-2" : "")}>
             <div className='text-2xl sm:basis-full'>Projects</div>
-            <div className='sm:print:hidden flex flex-row-reverse sm:flex-row gap-x-2 basis-full items-center'>
+            <div className='flex flex-row-reverse sm:flex-row gap-x-2 basis-full items-center'>
                 <div className='basis-0 grow text-right'>Commercial</div>
-                <div className='w-6 h-6 cursor-pointer'>{sorter}</div>
+                <div className='print:hidden w-6 h-6 cursor-pointer'>{sorter}</div>
                 <div className='basis-0 grow'>Hobby</div>
             </div>
             {[... grouped].map(([year, yearOfProjects]) => {

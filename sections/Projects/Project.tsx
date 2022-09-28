@@ -25,6 +25,7 @@ export const Project: React.FC<ProjectProps> = ({project, left, filter}) => {
                 {pointer}
             </div>
             <div className='basis-full px-1 my-1 sm:px-2 sm:my-2'>{project.description}</div>
+            {project.role && <div className='basis-full px-1 mb-1 sm:px-2 sm:mb-2'><span className='font-bold mr-1'>My role:</span>{project.role}</div>}
             <div className='basis-full px-1 mb-1 sm:px-2 sm:mb-2'>
             {project.technologies.map(technology => {
                                 return <Pill key={project.name + technology} label={technology} highlighted={filterMatches(filter, technology)} />

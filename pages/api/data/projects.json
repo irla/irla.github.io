@@ -26,13 +26,13 @@
       "startDate": "2016-02-06",
       "endDate": "2016-11-04",
       "description": "Small library which is able to read jax-rs annotated interfaces and create java proxies for them to then do REST calls using jax-rs client API",
-      "role": "I was originator and main developer of the library. I was managing the tasks and requirements.",
+      "role": "Initiator and main developer of the library. Managing tasks and requirements.",
       "technologies": ["Java", "Rest", "JAX-RS", "Groovy", "Guava", "Spock", "WireMock", "jGitFlow"],
       "url": "https://github.com/adaptris/jaxrs-client-proxy"
     },{
       "name": "Precision AG Microservices",
       "startDate": "2016-01-01",
-      "endDate": "Now",
+      "endDate": "2017-10-12",
       "description": "Set of microsvervices - mapping, authentication, permissions, ftp",
       "role": "Creator and manager of microservices, implementing and testing required functionality, introducing and helping other team members.",
       "technologies": ["Java", "Spring Boot", "Spring Security", "JAX-RS", "Jersey", "oAuth 2.0", "Spock", "Groovy", "MySql", "MongoDB", "Docker", "Dagger"]
@@ -42,20 +42,20 @@
       "startDate": "2014-02-01",
       "endDate": "2015-03-01",
       "description": "Project which allows to track the grain - it's movement and quality. Built with JBoss application as backend and PHP as frontend",
-      "role": "Implementing and designing solutions for required functionality, managing polish team work, doing estimations and helping with analysis",
+      "role": "Implementing and designing solutions for required functionality, managing polish team work, estimations and helping with analysis",
       "technologies": ["Java", "PHP", "Jboss", "CodeIgniter", "JPA", "Hibernate", "MySql", "MongoDB", "WebServices", "JAX-RS", "Cucumber"]
     },
     {
       "name": "Poultry Health",
       "startDate": "2013-10-01",
-      "endDate": "Now",
+      "endDate": "2017-10-12",
       "description": "Struts based web application which allows to register poultry farms medical tests, provides the CRM and advanced reporting",
       "role": "Improving application quality, implementing required functionality, discussing the tasks and helping development team and introducing new members",
       "technologies": ["Java", "Struts 2.x", "Birt", "JSF", "JPA", "Hibernate", "MySql", "CSS", "JavaScript", "ANT", "Cucumber"]
     },{
       "name": "Farmers Store",
       "startDate": "2013-09-01",
-      "endDate": "Now",
+      "endDate": "2017-10-12",
       "description": "Web store which synchronise the data with customer backend warehouses system. It has built in CMS",
       "role": "Improving the performance of application, helping with requirement analysis, monitoring the tasks and introducing new members to project",
       "technologies": ["Java", "Struts 2.x", "Stripes", "Jackrabbit", "JSF", "JPA", "Hibernate", "MySql", "CSS", "JavaScript", "ANT", "WebServices"]
@@ -105,17 +105,25 @@
   ],
   "hobby": [
     {
-      "name": "This CV Page",
-      "startDate": "2017-03-20",
+      "name": "This CV page",
+      "startDate": "2022-02-20",
       "endDate": "Now",
+      "description": "Rewritten version of previous CV. This time with TypeScript, Next.js and tailwindcss.",
+      "technologies": ["React", "TypeScript", "tailwindcss", "next.js", "github actions", "npm"],
+      "url": "http://github.com/irla/irla.github.io"
+    },
+    {
+      "name": "Previous version of this CV page",
+      "startDate": "2017-03-20",
+      "endDate": "2017-05-20",
       "description": "Finally a Html based CV which I always wanted to do - don't like word programs and good case to learn and research React",
       "technologies": ["React", "ES6", "webpack", "sass", "twitter bootstrap", "npm"],
-      "url": "http://github.com/irla/react-cv"
+      "url": "http://github.com/irla/irla.github.io"
     },
     {
       "name": "Mobile OCR app",
       "startDate": "2016-07-01",
-      "endDate": "Now",
+      "endDate": "2017-11-01",
       "description": "Another - after loteria.parago.pl OCR driven application",
       "role": "I have set up the application and it's business logic, I'm working on OCR and image object tracking algorithms - AR. I'm also responsible for writing advanced text parsing module",
       "technologies": ["Android", "Dagger", "Butterknife", "GreenDAO", "Firebase", "Retrofit", "Tesseract", "OpenCV", "Docker"]
