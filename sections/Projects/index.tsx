@@ -48,7 +48,7 @@ export const groupSortAndFilter = (projects: ProjectsProps, sortDir: SortDir = S
 }
 
 const addProjectToYears = (years: Map<number, YearOfProjects>, project: Project, type: ProjectType) => {
-    let year = new Date(project.startDate).getFullYear()
+    let year = project.endDate === 'Now' ? new Date().getFullYear() : new Date(project.endDate).getFullYear()
     let yearOfProjects = years.get(year)
     if (!yearOfProjects) {
         yearOfProjects = { months: new Map()}
@@ -58,7 +58,7 @@ const addProjectToYears = (years: Map<number, YearOfProjects>, project: Project,
 }
 
 const addProjectToMonth = (months: Map<number, MonthOfProjects>, project: Project, type: ProjectType) => {
-    let month = new Date(project.startDate).getMonth()
+    let month = project.endDate === 'Now' ? 12 : new Date(project.endDate).getMonth()
     let monthOfProjects = months.get(month)
     if (!monthOfProjects) {
         monthOfProjects = { }

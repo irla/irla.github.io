@@ -12,7 +12,7 @@ export const Pill: React.FC<PillProps> = ({children, label, highlighted, onClick
         "text-white bg-slate-600 hover:text-black hover:bg-slate-50" :
         "bg-slate-50 hover:text-white hover:bg-slate-600"
     if (onClick) {
-        classColors += " pointer-"
+        classColors += " cursor-pointer"
     }
     return <div onClick={() => { if (onClick) onClick(label)} } className={"group select-none inline-block mr-1 mb-1 px-1 text-xs border border-slate-900 rounded-md shadow-sm shadow-slate-300 " + classColors}>
     {label}

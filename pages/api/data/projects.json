@@ -4,8 +4,8 @@
       "name": "casumo.com",
       "startDate": "2017-10-16",
       "endDate": "Now",
-      "description": "Microservices related to user handling",
-      "role": "Developing existing and implementing new services",
+      "description": "Online casino platform availbile in multiple jurisdictions. Compilant with very many complex regulations and still player friendly.",
+      "role": "I've been working in many areas of the platform, from aquisition, then compliance to payments. Part of agile team. Most often focused on providing new functionalities or new services, also improving the platform as a whole.",
       "technologies": ["Spring Boot", "Kotlin", "Java", "Jdbi", "JPA", "Spock", "RabbitMQ", "CQRS", "k8s", "Docker", "Axon"]
     },
     {
@@ -19,7 +19,7 @@
     {
       "name": "Business Integration Platform",
       "startDate": "2016-04-04",
-      "endDate": "2017-10-12",
+      "endDate": "2017-09-30",
       "description": "Integration platform allowing customers to track and monitor orders, stocks movments by integrating their backend systems.",
       "role": "Implementing required functionality, testing, helping team members, leading scrum and retrospective meetings",
       "technologies": ["Java", "JSF", "PrimeFaces", "EJB", "Wildfly", "ActiveMQ", "JMS", "JAX-RS", "WebServices", "Infinispan", "Docker"]
@@ -36,7 +36,7 @@
     {
       "name": "Precision AG Microservices",
       "startDate": "2016-01-01",
-      "endDate": "2017-10-12",
+      "endDate": "2017-08-12",
       "description": "Set of microsvervices - mapping, authentication, permissions, ftp",
       "role": "Creating and managing microservices, implementing and testing required functionality, introducing and helping other team members.",
       "technologies": ["Java", "Spring Boot", "Spring Security", "JAX-RS", "Jersey", "oAuth 2.0", "Spock", "Groovy", "MySql", "MongoDB", "Docker", "Dagger"]
@@ -52,7 +52,7 @@
     {
       "name": "Poultry Health",
       "startDate": "2013-10-01",
-      "endDate": "2017-10-12",
+      "endDate": "2017-7-12",
       "description": "Struts based web application which allows to register poultry farms medical tests, provides the CRM and advanced reporting",
       "role": "Improving application quality, implementing required functionality, discussing the tasks and helping development team, introducing new members",
       "technologies": ["Java", "Struts 2.x", "Birt", "JSF", "JPA", "Hibernate", "MySql", "CSS", "JavaScript", "ANT", "Cucumber"]
@@ -60,7 +60,7 @@
     {
       "name": "Farmers Store",
       "startDate": "2013-09-01",
-      "endDate": "2017-10-12",
+      "endDate": "2017-6-12",
       "description": "Web store which synchronise the data with customer backend warehouses system. It has built in CMS",
       "role": "Improving the performance of application, helping with requirement analysis, monitoring the tasks and introducing new members to project",
       "technologies": ["Java", "Struts 2.x", "Stripes", "Jackrabbit", "JSF", "JPA", "Hibernate", "MySql", "CSS", "JavaScript", "ANT", "WebServices"]
@@ -69,7 +69,7 @@
       "name": "Rest Services",
       "startDate": "2013-05-03",
       "endDate": "2013-08-30",
-      "description": "Set of micro services (users, wallet, preference, etc.) used by media stores (music, video and game stores)",
+      "description": "Set of microservices (users, wallet, preference, etc.) used by media stores (music, video and game stores)",
       "role": "Performance testing, implementation of requirements, testing other team members tasks, being a member of agile team",
       "technologies": ["Java", "Tomcat", "JMeter", "Rest", "JAX-RS", "Apache CXF", "JPA", "Hibernate", "MySql"]
     },
