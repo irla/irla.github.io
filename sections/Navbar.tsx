@@ -156,8 +156,9 @@ export const Navbar: React.FC<NavbarProps> = (props => {
                         <XCircleIcon className="block h-5 w-5" aria-hidden="true" />
                       </button>
                     </span>
-                    <input type="search" name="q" autoComplete='off' value={filter} onKeyPress={blockEnterPress} onChange={onFilterChange}
-                      className="py-2 text-sm rounded-md pl-10 focus:outline-none bg-gray-50 focus:bg-white text-gray-900" placeholder="Filter..." />
+                    <input type="text" autoComplete='off' value={filter} onKeyPress={blockEnterPress} onChange={onFilterChange}
+                      className="py-2 text-sm rounded-md pl-10 focus:outline-none bg-gray-50 focus:bg-white text-gray-900" 
+                      placeholder="Filter..." />
                   </div>
                 </form>
               </div>

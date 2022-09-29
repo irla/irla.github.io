@@ -6,32 +6,37 @@
         {
           "name": "Java",
           "score": 9,
-          "info": "My favorite language and the one I most often work with. I like it for its consistency and stability."
+          "info": "The one I most often work with. I like it for its consistency and stability."
+        },
+        {
+          "name": "Kotlin",
+          "score": 9,
+          "info": "My language of choice for backedn"
+        },
+        {
+          "name": "TypeScript",
+          "score": 6,
+          "info": "Good way to make ES more friendly to programmers"
         },
         {
           "name": "JavaScript",
           "score": 8,
-          "info": "Like to work with it as it is very flexible, sometimes wired and funny."
-        },
-        {
-          "name": "PHP",
-          "score": 6,
-          "info": "Sometimes the easiest and fastest to use, even I don't like its inconsistency."
+          "info": "I like to work with it as it is very flexible, sometimes wired and funny."
         },
         {
           "name": "Groovy",
-          "score": 4,
+          "score": 6,
           "info": "Although I used it mainly in spock tests (and some gradle configs) I really like the power it gives over the typical java."
         },
         {
           "name": "Python",
-          "score": 3,
-          "info": "I sometimes used it to quickly write some extension (e.g. for mercurial or skype) - nice to quickly prototype something."
+          "score": 4,
+          "info": "I've most often use it to script something or write an extension."
         },
         {
-          "name": "Scala",
-          "score": 2,
-          "info": "Researched it few years ago and really liked the language and scala environment."
+          "name": "PHP",
+          "score": 6,
+          "info": "Sometimes the easiest and fastest to use, even I don't like its inconsistency and style."
         },
         {
           "name": "SQL",
@@ -41,87 +46,17 @@
       ]
     },
     {
-      "name": "Frontend Development",
-      "items": [
-        {
-          "name": "Html",
-          "score": 8,
-          "info": "Understanding the DOM structure and what DOM is, used HTML for about 15 years now"
-        },
-        {
-          "name": "CSS",
-          "score": 5,
-          "info": "I know how to use and tweak it :)"
-        },
-        {
-          "name": "Sass",
-          "score": 6,
-          "info": "An eye opener for CSS issues, very simple and very useful same time."
-        },
-        {
-          "name": "ES6",
-          "score": 7,
-          "info": "Not a huge experience with it, but I see a lot of benefits over vanilla javascript."
-        },
-        {
-          "name": "Backbone",
-          "score": 5,
-          "info": "I like it for the level of control it gives to the developer even the cost is boilerplate code"
-        },
-        {
-          "name": "React",
-          "score": 7,
-          "info": "I really like the idea of creating own 'tags' (something I always valued in JSP) and the way the library works"
-        },
-        {
-          "name": "Redux",
-          "score": 8,
-          "info": "Simple and powerful, although I still don't like the switch and constants for actions"
-        },
-        {
-          "name": "Twitter Bootstrap",
-          "score": 5,
-          "info": "I'm finally able to create a web page which looks acceptable good without loosing days to play with CSS"
-        }
-      ]
-    },
-    {
       "name": "Backend Development",
       "items": [
         {
-          "name": "JEE",
-          "score": 6,
-          "info": "I'm not a fan of the standard as it is often overcomplicated or wrongly designed (e.g. JAAS)"
-        },
-        {
-          "name": "Jboss-Wildfly",
-          "score": 5,
-          "info": "It's not my choice java web server but I was often working with it."
-        },
-        {
-          "name": "Tomcat",
-          "score": 6,
-          "info": "Much simpler than Jboss - doing it's job."
-        },
-        {
-          "name": "Apache",
-          "score": 5,
-          "info": "I'm able to configure vhosts for php or proxy for java web apps or modify headers."
-        },
-        {
-          "name": "Hibernate",
-          "score": 7,
-          "info": "I've spent many years with it and I could for example configure level 2 cache or add interceptors to monitor entity changes"
-        },
-        {
           "name": "Spring Environment",
           "score": 8,
-          "info": "I started using it 11 years ago and I'm happy it evolves all the time. Heavily used the security module."
+          "info": "I started using it 15 years ago and I'm happy it evolves all the time. Heavily used the security module."
         },
         {
-          "name": "JAX-RS",
+          "name": "Jdbi",
           "score": 8,
-          "info": "I like the standard and used it many times in many projects, I think it's well definied and fairly simple."
+          "info": "Another standard which is well defined and simple. Almost alwayse used it with Hibernate, just once with google BigData"
         },
         {
           "name": "JPA",
@@ -129,9 +64,33 @@
           "info": "Another standard which is well defined and simple. Almost alwayse used it with Hibernate, just once with google BigData"
         },
         {
+          "name": "Hibernate",
+          "score": 7,
+          "info": "I've spent many years with it and I could for example configure level 2 cache or add interceptors to monitor entity changes"
+        },
+        {
+          "name": "RMQ",
+          "score": 6
+        },
+        {
+          "name": "RabbitMq",
+          "score": 6
+        },
+        {
           "name": "Docker",
-          "score": 4,
-          "info": "Very useful. I've not used it on Live environment yet, but I'm pretty impressed with versioning design."
+          "score": 8
+        },
+        {
+          "name": "k8s",
+          "score": 4
+        },
+        {
+          "name": "AWS",
+          "score": 2
+        },
+        {
+          "name": "GCP",
+          "score": 2
         },
         {
           "name": "MySql",
@@ -141,13 +100,62 @@
         {
           "name": "MongoDb",
           "score": 5,
-          "info": "I've used it in my hobby project (including MapReduce functionality) and one commercial but never used it in real production, so I'm not aware of it's weakness. But I still really like it."
+          "info": "I've used it in my hobby project (including MapReduce functionality) and one commercial but never used it in real production, so I'm not aware of it's weakness. But I still really liked it."
+        }
+      ]
+    },
+    {
+      "name": "Frontend Development",
+      "items": [
+        {
+          "name": "React",
+          "score": 7,
+          "info": "I really like the idea of creating own 'tags' and the way the library works"
+        },
+        {
+          "name": "Next.js",
+          "score": 6,
+          "info": "Used to create this CV"
+        },
+        {
+          "name": "Redux",
+          "score": 8,
+          "info": "Simple and powerful, although I still don't like the switch and constants for actions"
+        },
+        {
+          "name": "Html",
+          "score": 8,
+          "info": "Understanding the DOM structure and what DOM is, used HTML for about 15 years now"
+        },
+        {
+          "name": "CSS",
+          "score": 6,
+          "info": "I know how to use it ¯\\_(ツ)_/¯"
+        },
+        {
+          "name": "Tailwindcss",
+          "score": 5,
+          "info": "I'm not sure yet I like this approach, very comfortable on one hand on other I can see potential problems with it"
+        },
+        {
+          "name": "Sass",
+          "score": 6,
+          "info": "An eye opener for CSS issues, very simple and very useful same time."
+        },
+        {
+          "name": "Jest",
+          "score": 6
         }
       ]
     },
     {
       "name": "Mobile Development",
       "items": [
+        {
+          "name": "ReactNative",
+          "score": 2,
+          "info": "I've used it many years ago and it would be my choice for any next mobile application"
+        },
         {
           "name": "Dagger",
           "score": 6,

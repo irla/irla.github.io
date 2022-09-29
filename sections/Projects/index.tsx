@@ -48,7 +48,7 @@ export const groupSortAndFilter = (projects: ProjectsProps, sortDir: SortDir = S
 }
 
 const addProjectToYears = (years: Map<number, YearOfProjects>, project: Project, type: ProjectType) => {
-    let year = new Date(project.startDate).getFullYear()
+    let year = project.endDate === 'Now' ? new Date().getFullYear() : new Date(project.endDate).getFullYear()
     let yearOfProjects = years.get(year)
     if (!yearOfProjects) {
         yearOfProjects = { months: new Map()}
@@ -58,7 +58,7 @@ const addProjectToYears = (years: Map<number, YearOfProjects>, project: Project,
 }
 
 const addProjectToMonth = (months: Map<number, MonthOfProjects>, project: Project, type: ProjectType) => {
-    let month = new Date(project.startDate).getMonth()
+    let month = project.endDate === 'Now' ? 12 : new Date(project.endDate).getMonth()
     let monthOfProjects = months.get(month)
     if (!monthOfProjects) {
         monthOfProjects = { }
@@ -95,9 +95,9 @@ export const Projects: React.FC<ProjectsProps> = (props) => {
     return (
         <div id="Projects" className={" " + (filtered ? "sm:mr-2" : "")}>
             <div className='text-2xl sm:basis-full'>Projects</div>
-            <div className='sm:print:hidden flex flex-row-reverse sm:flex-row gap-x-2 basis-full items-center'>
+            <div className='flex flex-row-reverse sm:flex-row gap-x-2 basis-full items-center'>
                 <div className='basis-0 grow text-right'>Commercial</div>
-                <div className='w-6 h-6 cursor-pointer'>{sorter}</div>
+                <div className='print:hidden w-6 h-6 cursor-pointer'>{sorter}</div>
                 <div className='basis-0 grow'>Hobby</div>
             </div>
             {[... grouped].map(([year, yearOfProjects]) => {
