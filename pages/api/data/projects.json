@@ -1,47 +1,51 @@
 {
   "commercial": [
     {
-      "name": "Growth Backend",
+      "name": "casumo.com",
       "startDate": "2017-10-16",
       "endDate": "Now",
       "description": "Microservices related to user handling",
       "role": "Developing existing and implementing new services",
-      "technologies": ["Spring Boot", "JPA", "Java 8", "RabbitMQ", "CQRS", "Docker", "A/B Tests", "Axon"]
-    },{
+      "technologies": ["Spring Boot", "Kotlin", "Java", "Jdbi", "JPA", "Spock", "RabbitMQ", "CQRS", "k8s", "Docker", "Axon"]
+    },
+    {
       "name": "Files Gateway",
       "startDate": "2017-07-01",
       "endDate": "2017-10-12",
       "description": "Small desktop application allowing to easily upload and download files from Integration Platform",
       "role": "Main developer of application, introducing the architecture and solutions, implementing requirements.",
       "technologies": ["ES6", "React", "Redux", "Electron", "Jest", "Flow", "Lint", "Axios", "S3"]
-    },{
+    },
+    {
       "name": "Business Integration Platform",
       "startDate": "2016-04-04",
-      "endDate": "2017-10-11",
-      "description": "Integration platform which allows customers to track and monitor their orders, movements or stocks by integrating their backend system.",
+      "endDate": "2017-10-12",
+      "description": "Integration platform allowing customers to track and monitor orders, stocks movments by integrating their backend systems.",
       "role": "Implementing required functionality, testing, helping team members, leading scrum and retrospective meetings",
-      "technologies": ["Java", "JSF", "PrimeFaces", "EJB", "Wildfly", "JAX-RS", "WebServices", "Infinispan", "Docker"]
-    },{
+      "technologies": ["Java", "JSF", "PrimeFaces", "EJB", "Wildfly", "ActiveMQ", "JMS", "JAX-RS", "WebServices", "Infinispan", "Docker"]
+    },
+    {
       "name": "jaxrs-client-proxy",
       "startDate": "2016-02-06",
       "endDate": "2016-11-04",
-      "description": "Small library which is able to read jax-rs annotated interfaces and create java proxies for them to then do REST calls using jax-rs client API",
+      "description": "Small library to read jax-rs annotated interfaces and create java proxies for them to then do REST calls using jax-rs client API",
       "role": "Initiator and main developer of the library. Managing tasks and requirements.",
       "technologies": ["Java", "Rest", "JAX-RS", "Groovy", "Guava", "Spock", "WireMock", "jGitFlow"],
       "url": "https://github.com/adaptris/jaxrs-client-proxy"
-    },{
+    },
+    {
       "name": "Precision AG Microservices",
       "startDate": "2016-01-01",
       "endDate": "2017-10-12",
       "description": "Set of microsvervices - mapping, authentication, permissions, ftp",
-      "role": "Creator and manager of microservices, implementing and testing required functionality, introducing and helping other team members.",
+      "role": "Creating and managing microservices, implementing and testing required functionality, introducing and helping other team members.",
       "technologies": ["Java", "Spring Boot", "Spring Security", "JAX-RS", "Jersey", "oAuth 2.0", "Spock", "Groovy", "MySql", "MongoDB", "Docker", "Dagger"]
     },
     {
       "name": "Grain Movement Tracker",
       "startDate": "2014-02-01",
       "endDate": "2015-03-01",
-      "description": "Project which allows to track the grain - it's movement and quality. Built with JBoss application as backend and PHP as frontend",
+      "description": "Grain movemnt and quality tracking application. Built with JBoss application as backend and PHP as frontend",
       "role": "Implementing and designing solutions for required functionality, managing polish team work, estimations and helping with analysis",
       "technologies": ["Java", "PHP", "Jboss", "CodeIgniter", "JPA", "Hibernate", "MySql", "MongoDB", "WebServices", "JAX-RS", "Cucumber"]
     },
@@ -50,9 +54,10 @@
       "startDate": "2013-10-01",
       "endDate": "2017-10-12",
       "description": "Struts based web application which allows to register poultry farms medical tests, provides the CRM and advanced reporting",
-      "role": "Improving application quality, implementing required functionality, discussing the tasks and helping development team and introducing new members",
+      "role": "Improving application quality, implementing required functionality, discussing the tasks and helping development team, introducing new members",
       "technologies": ["Java", "Struts 2.x", "Birt", "JSF", "JPA", "Hibernate", "MySql", "CSS", "JavaScript", "ANT", "Cucumber"]
-    },{
+    },
+    {
       "name": "Farmers Store",
       "startDate": "2013-09-01",
       "endDate": "2017-10-12",
@@ -80,7 +85,7 @@
       "name": "ODT",
       "startDate": "2011-07-01",
       "endDate": "2012-06-25",
-      "description": "System made for leading telecommunication company. It helps to manage data and metadata. It provides utilities to import, transform and export data to many kind of reports. It provides tools to manage data consistency checks. System also helps to create customer documentation",
+      "description": "System made for leading telecommunication company. It helps to manage data and metadata. It provides utilities to import, transform and export data to many kind of reports.",
       "role": "Agile team member. Implementing planned tasks, taking part of scrum meetings, doing code reviews.",
       "technologies": ["Java", "J2EE", "Hibernate", "JPA", "JSP", "Spring MVC 3", "Spring Security", "JavaScript", "RobotFramework", "Python",
         "jQuery", "JUnit", "HtmlUnit", "CSS", "XSLT", "Tomcat", "QueryDSL", "Maven", "Mercurial"]
@@ -116,7 +121,7 @@
       "name": "Previous version of this CV page",
       "startDate": "2017-03-20",
       "endDate": "2017-05-20",
-      "description": "Finally a Html based CV which I always wanted to do - don't like word programs and good case to learn and research React",
+      "description": "Finally a Html based CV which I always wanted to do, good use case to learn and research React",
       "technologies": ["React", "ES6", "webpack", "sass", "twitter bootstrap", "npm"],
       "url": "http://github.com/irla/irla.github.io"
     },
@@ -141,7 +146,7 @@
       "name": "loteria.parago.pl",
       "startDate": "2016-02-01",
       "endDate": "2017-01-01",
-      "description": "Small mobile application which eases the process of sending receipt data to https://loteriaparagonowa.gov.pl - national receipt lottery sponsored by government - scan the receipt, validate OCR read data and sent to gov web page.",
+      "description": "Small mobile application to ease the process of sending receipt data to https://loteriaparagonowa.gov.pl - national receipt lottery sponsored by government - scans the receipt, validates OCR read data and sends it to gov web page.",
       "role": "I was responsible for image analysis, finding the text in picture analysis, before OCR image preparation and performance upgrades. I was also teaching tesseract ocr the most common receipt fonts. Also web page set up.",
       "technologies": ["Android", "Tesseract", "OpenCV", "Apache", "PHP", "MySql"],
       "url": "http://loteria.parago.pl"
@@ -157,7 +162,7 @@
       "name": "parago.pl",
       "startDate": "2014-05-01",
       "endDate": "2016-02-01",
-      "description": "Complex mobile and web application which simplifies home budget managament. Made by four people. Designed to make managing home budget as easy as possible.",
+      "description": "Complex mobile and web application which simplifies home budget managament. Designed to make managing home budget as easy as possible. Created withing group of 4 friends.",
       "role": "I'm inventor of main idea of the application. I'm resposinble for web development - frontend and backend",
       "technologies": ["Java", "MongoDB", "MapReduce", "Solr", "Spring Boot", "Node.js", "Backbone.js", "Marionette", "Require.js", "Underscore.js", "jQuery", "CSS", "Apache"],
       "url": "http://parago.pl"
@@ -190,7 +195,7 @@
       "name": "eventbusjs",
       "startDate": "2012-04-15",
       "endDate": "2012-04-18",
-      "description":  "Very small open-source JavaScript library which implements Event Bus design pattern. Library is not described, to understand its functionality I recommend to see the unit tests",
+      "description":  "Very small open-source JavaScript library which implements Event Bus design pattern. Library is not described, to understand its functionality I recommend to see unit tests",
       "role": "I'm creator of the library. I was going to use it in new version of sledzeniepaczek.pl to simplify implementation of MVP pattern.",
       "technologies": ["JavaScript", "karma", "requirejs"],
       "url": "https://github.com/irla/eventbusjs"
@@ -200,7 +205,7 @@
       "startDate": "2010-03-15",
       "endDate": "2010-09-15",
       "description":  "A small web application that searches of packages in most popular companies. It uses HtmlUnit to scrap search results of each provider. It's hosted on Google Cloud – GAE. It also provides tracking system, which sends emails when pack state changes.",
-      "role": "Co-inventor, co-founder and co-owner of this web application. I made this application together with friend. I developed security section (It's uses AspectJ aspects to read our annotations and protect procedure calls).",
+      "role": "Co-inventor, co-founder and co-owner of this web application. I've made this application together with a friend. I developed security section (It's uses AspectJ aspects to read our annotations and protect procedure calls).",
       "technologies": ["Java", "Spring IOC", "Spring MVC", "Spring Security", "GWT", "GAE", "Mvp4g", "JPA", "HtmlUnit", "AspectJ", "Eclipse"]
     },
     {
