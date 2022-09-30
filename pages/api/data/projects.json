@@ -118,6 +118,13 @@
       "url": "http://github.com/irla/irla.github.io"
     },
     {
+      "name": "Lambdas research",
+      "startDate": "2021-09-20",
+      "endDate": "2021-10-20",
+      "description": "Small research of how to use lambdas with new kotlin frameworks",
+      "technologies": ["kotlin", "ktor", "kotless", "terraform", "AWS"]
+    },
+    {
       "name": "Previous version of this CV page",
       "startDate": "2017-03-20",
       "endDate": "2017-05-20",
