@@ -44,7 +44,7 @@ const Home: NextPage<Props> = ({experience, skills, projects}: Props) => {
       <Head>
         <title>Paweł Irla - CV</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="CV page description" />
+        <meta name="description" content="CV page done with nextjs, typscript and tailwindcss" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

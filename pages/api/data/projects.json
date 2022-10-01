@@ -6,7 +6,7 @@
       "endDate": "Now",
       "description": "Online casino platform availbile in multiple jurisdictions. Compilant with very many complex regulations and still player friendly.",
       "role": "I've been working in many areas of the platform, from aquisition, then compliance to payments. Part of agile team. Most often focused on providing new functionalities or new services, also improving the platform as a whole.",
-      "technologies": ["Spring Boot", "Kotlin", "Java", "Jdbi", "JPA", "Spock", "RabbitMQ", "CQRS", "k8s", "Docker", "Axon"]
+      "technologies": ["Spring Boot", "Kotlin", "Java", "Jdbi", "JPA", "Spock", "RabbitMQ", "CQRS", "k8s", "GCP", "Docker", "Axon", "MySql"]
     },
     {
       "name": "Files Gateway",
@@ -103,8 +103,8 @@
       "name": "Maxofon",
       "startDate": "2006-12-01",
       "endDate": "2007-09-01",
-      "description":  "Master thesis. Program which allows to make VoIP connections. Project divided into two parts: Java standalone application and .Net Windows forms application. Project made for local company.",
-      "role": "I built both applications and developed protocol to communicate over IP networks. It's using TCP/IP to establish and manage connections and UDP to send compressed sound data. I used open-source speex to compress the voice. In Java part I used Spring to manage user interface objects and actions.",
+      "description":  "Master thesis. Application to make VoIP connections. Project divided into two parts: Java standalone application and .Net Windows forms application. Project made for local company.",
+      "role": "I've built both applications and developed protocol to communicate over IP networks. It's using TCP/IP to establish and manage connections and UDP to send compressed sound data. I used open-source speex to compress the voice. In Java part I used Spring to manage user interface objects and actions.",
       "technologies": ["Java", "XML", "XSD", "XSLT", "Log4J", "Spring IOC", "VoIP", "TCP/IP", "UDP", "JNI", "SWIG", "C#", "P/Invoke", "Windows Forms", "C++", "Eclipse"]
     }
   ],
