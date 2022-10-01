@@ -49,7 +49,7 @@
       "name": "Backend Development",
       "items": [
         {
-          "name": "Spring Environment",
+          "name": "Spring",
           "score": 8,
           "info": "I started using it 15 years ago and I'm happy it evolves all the time. Heavily used the security module."
         },
@@ -69,7 +69,7 @@
           "info": "I've spent many years with it and I could for example configure level 2 cache or add interceptors to monitor entity changes"
         },
         {
-          "name": "RMQ",
+          "name": "JMS",
           "score": 6
         },
         {
