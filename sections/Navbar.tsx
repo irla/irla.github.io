@@ -1,12 +1,12 @@
-import { Disclosure } from '@headlessui/react'
-import { MagnifyingGlassIcon, XCircleIcon, Bars3Icon } from '@heroicons/react/24/outline'
-import { off } from 'process'
+import { Disclosure } from "@headlessui/react"
+import { MagnifyingGlassIcon, XCircleIcon, Bars3Icon } from "@heroicons/react/24/outline"
+import { off } from "process"
 
-import { useState, useEffect } from 'react'
-import { isNotBlank } from '../lib/filter'
+import { useState, useEffect } from "react"
+import { isNotBlank } from "../lib/filter"
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ")
 }
 
 export interface NavbarProps {
@@ -31,21 +31,21 @@ export const Navbar: React.FC<NavbarProps> = (props => {
     if (filter != props.filterValue) {
       setFilterValue(props.filterValue)
       if (isNotBlank(props.filterValue)) {
-        setCurrentPageName('Projects')
+        setCurrentPageName("Projects")
       }
     }
   }, [props.filterValue])
 
   useEffect(() => {
     const onScroll = () => setOffset(window.pageYOffset);
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, [])
 
   const findNearestPage = (pageOffset: number, items: NavigationItem[]): NavigationItem => {
     return items.reduce((first, second) => {
-      if (typeof document !== 'undefined') {
+      if (typeof document !== "undefined") {
         const firstOffset = document.getElementById(first.href.substring(1))?.offsetTop ?? Number.MAX_SAFE_INTEGER
         const secondOffset = document.getElementById(second.href.substring(1))?.offsetTop ?? Number.MAX_SAFE_INTEGER
         const firstDist = Math.abs(firstOffset - pageOffset)
@@ -58,7 +58,7 @@ export const Navbar: React.FC<NavbarProps> = (props => {
 
   const updateCurrent = () => {
     var nearestPageName = isNotBlank(filter)
-      ? 'Projects'
+      ? "Projects"
       : findNearestPage(offset, props.navigation).name
     if (nearestPageName !== currentPageName) {
       setCurrentPageName(nearestPageName)
@@ -67,14 +67,14 @@ export const Navbar: React.FC<NavbarProps> = (props => {
   updateCurrent()
 
   const blockEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if(e.key === 'Enter') {
+    if(e.key === "Enter") {
       e.preventDefault()
     }
   };
 
   const clearSubmited = (e: React.FormEvent<HTMLButtonElement>) => {
-    setFilterValue('')
-    fireFilterChangeDelayed('', 200, 'About')
+    setFilterValue("")
+    fireFilterChangeDelayed("", 200, "About")
     e.preventDefault()
   };
 
@@ -91,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = (props => {
     setTimeoutId(window.setTimeout(() => { 
       props.onFilterUpdate(value)
       if (page || !isNotBlank(value)) {
-        window.setTimeout(() => setCurrentPageName(page ?? 'About'), 500)
+        window.setTimeout(() => setCurrentPageName(page ?? "About"), 500)
       }
     }, delay))
   }
@@ -127,14 +127,14 @@ export const Navbar: React.FC<NavbarProps> = (props => {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          isCurrent(item) ? 'bg-gray-400 text-gray-900' : 'text-gray-900 hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          isCurrent(item) ? "bg-gray-400 text-gray-900" : "text-gray-900 hover:bg-gray-700 hover:text-white",
+                          "px-3 py-2 rounded-md text-sm font-medium"
                         )}
-                        aria-current={isCurrent(item) ? 'page' : undefined}
+                        aria-current={isCurrent(item) ? "page" : undefined}
                         onClick={() => {
                           setCurrentPageName(item.name)
-                          if (item.name !== 'Skills' && item.name !== 'Projects') {
-                            fireFilterChangeDelayed('', 200, item.name)
+                          if (item.name !== "Skills" && item.name !== "Projects") {
+                            fireFilterChangeDelayed("", 200, item.name)
                           }
                         }}
                       >
@@ -156,7 +156,7 @@ export const Navbar: React.FC<NavbarProps> = (props => {
                         <XCircleIcon className="block h-5 w-5" aria-hidden="true" />
                       </button>
                     </span>
-                    <input type="text" autoComplete='off' value={filter} onKeyPress={blockEnterPress} onChange={onFilterChange}
+                    <input type="text" autoComplete="off" value={filter} onKeyPress={blockEnterPress} onChange={onFilterChange}
                       className="py-2 text-sm rounded-md pl-10 focus:outline-none bg-gray-50 focus:bg-white text-gray-900" 
                       placeholder="Filter..." />
                   </div>
@@ -173,10 +173,10 @@ export const Navbar: React.FC<NavbarProps> = (props => {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    isCurrent(item) ? 'bg-gray-400 text-gray-900' : 'text-gray-900 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
+                    isCurrent(item) ? "bg-gray-400 text-gray-900" : "text-gray-900 hover:bg-gray-700 hover:text-white",
+                    "block px-3 py-2 rounded-md text-base font-medium"
                   )}
-                  aria-current={isCurrent(item) ? 'page' : undefined}
+                  aria-current={isCurrent(item) ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>

@@ -1,6 +1,6 @@
-import { Pill } from '../components/Pill'
-import { Score } from '../components/Score'
-import { isNotBlank, filterMatches } from '../lib/filter'
+import { Pill } from "../components/Pill"
+import { Score } from "../components/Score"
+import { isNotBlank, filterMatches } from "../lib/filter"
 
 interface Skill {
     name: string,
@@ -31,10 +31,10 @@ export interface SkillsProps {
 export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, filter, filterSetter}) => {
     return <div>
             <div className="pt-2">
-                <div id="Skills" className='block text-2xl'>Skills</div>
+                <div id="Skills" className="block text-2xl">Skills</div>
                 {skills.map((skillGroupItem: SkillGroup) => {
                     return <div key={skillGroupItem.name} className="mb-2">
-                        <div className='block'>{skillGroupItem.name}</div>
+                        <div className="block">{skillGroupItem.name}</div>
                         <div>
                         {skillGroupItem.items.map(( skillItem: Skill) => {
                             return <Pill label={skillItem.name} key={skillItem.name} highlighted={filterMatches(filter, skillItem.name)} onClick={filterSetter}>
@@ -46,17 +46,17 @@ export const Skills: React.FC<SkillsProps> = ({skills, languages, interests, fil
                     </div>
                 })}
             </div>
-            <div className='mb-2'>
-                <div className='block text-2xl'>Interests</div>
+            <div className="mb-2">
+                <div className="block text-2xl">Interests</div>
                 {interests.map((interestItem: string) => {
                     return <Pill key={interestItem} label={interestItem} highlighted={filterMatches(filter, interestItem)} />
                 })}
             </div>
-            <div className={isNotBlank(filter) ? 'hidden' : ''}>
-                <div className='block text-2xl'>Languages</div>
+            <div className={isNotBlank(filter) ? "hidden" : ""}>
+                <div className="block text-2xl">Languages</div>
                 {languages.map((languageItem: Language) => {
                     return <div key={languageItem.name}>
-                        <div className='block'>{languageItem.name} - <span>{languageItem.level}</span></div>
+                        <div className="block">{languageItem.name} - <span>{languageItem.level}</span></div>
                     </div>
                 })}
             </div>

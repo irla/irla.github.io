@@ -1,4 +1,4 @@
-import { DateRange } from '../components/DateRange'
+import { DateRange } from "../components/DateRange"
 
 interface Work {
     company: string,
@@ -27,10 +27,10 @@ export const Experience: React.FC<ExperienceProps> = ({work, education}) => {
     return (
         <div>
             <div className="py-2 mb-3">
-                <div id="Experience" className='block text-2xl'>Experience</div>
+                <div id="Experience" className="block text-2xl">Experience</div>
                 {work.map((workItem: Work) => {
                     return <div key={workItem.company} className="py-2">
-                        <div className='block text-xl'>{workItem.company}</div>
+                        <div className="block text-xl">{workItem.company}</div>
                         <DateRange from={workItem.startDate} to={workItem.endDate} size="sm"/>
                         <strong>{workItem.position}</strong>
                         <div className="block">{workItem.summary}</div>
@@ -38,10 +38,10 @@ export const Experience: React.FC<ExperienceProps> = ({work, education}) => {
                 })}
             </div>
             <div className="py-2 mb-3">
-                <div id="Education" className='block text-2xl'>Education</div>
+                <div id="Education" className="block text-2xl">Education</div>
                 {education.map((educationItem: Education) => {
                     return <div key={educationItem.institution} className="py-2">
-                        <div className='block text-xl'>{educationItem.institution}</div>
+                        <div className="block text-xl">{educationItem.institution}</div>
                         <DateRange from={educationItem.startDate} to={educationItem.endDate} size="sm" />
                         <strong>{educationItem.studyType} - {educationItem.area}</strong>
                         {educationItem.summary.map((summaryLine: string) => {

@@ -4,13 +4,13 @@ export const isNotBlank = (filter?: String): boolean => {
 }
 
 const equivalents: Map<string, Array<string>> = new Map([
-    ['jms', ['rabbitmq', 'activemq']],
-    ['rmq', ['rabbitmq']],
-    ['amq', ['activemq']],
-    ['cloud', ['aws', 'gcp']],
-    ['event', ['axon']],
-    ['sql', ['db2']],
-    ['jvm', ['java', 'groovy', 'kotlin']]
+    ["jms", ["rabbitmq", "activemq"]],
+    ["rmq", ["rabbitmq"]],
+    ["amq", ["activemq"]],
+    ["cloud", ["aws", "gcp"]],
+    ["event", ["axon"]],
+    ["sql", ["db2"]],
+    ["jvm", ["java", "groovy", "kotlin"]]
 ])
 
 const contains = (filter: string, skillName: string): boolean => {
@@ -26,7 +26,7 @@ const containsEquivalent = (filter: string, skillName: string) => {
 }
 
 const javaAndJavaScript = (filter: string, skillName: string): boolean => {
-    return filter.toLowerCase() === 'java' && skillName.toLowerCase() === 'javascript'
+    return filter.toLowerCase() === "java" && skillName.toLowerCase() === "javascript"
 }
 
 export const filterMatches = (filter: string, skillName: string): boolean => {

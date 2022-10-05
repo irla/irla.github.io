@@ -1,7 +1,7 @@
-import { Project } from './Project'
-import { filterMatches, isNotBlank } from '../../lib/filter'
-import { useState } from 'react'
-import { ArrowDownCircleIcon, ArrowUpCircleIcon } from '@heroicons/react/24/outline'
+import { Project } from "./Project"
+import { filterMatches, isNotBlank } from "../../lib/filter"
+import { useState } from "react"
+import { ArrowDownCircleIcon, ArrowUpCircleIcon } from "@heroicons/react/24/outline"
 
 export interface Project {
     name: string,
@@ -48,7 +48,7 @@ export const groupSortAndFilter = (projects: ProjectsProps, sortDir: SortDir = S
 }
 
 const addProjectToYears = (years: Map<number, YearOfProjects>, project: Project, type: ProjectType) => {
-    let year = project.endDate === 'Now' ? new Date().getFullYear() : new Date(project.endDate).getFullYear()
+    let year = project.endDate === "Now" ? new Date().getFullYear() : new Date(project.endDate).getFullYear()
     let yearOfProjects = years.get(year)
     if (!yearOfProjects) {
         yearOfProjects = { months: new Map()}
@@ -58,7 +58,7 @@ const addProjectToYears = (years: Map<number, YearOfProjects>, project: Project,
 }
 
 const addProjectToMonth = (months: Map<number, MonthOfProjects>, project: Project, type: ProjectType) => {
-    let month = project.endDate === 'Now' ? 12 : new Date(project.endDate).getMonth()
+    let month = project.endDate === "Now" ? 12 : new Date(project.endDate).getMonth()
     let monthOfProjects = months.get(month)
     if (!monthOfProjects) {
         monthOfProjects = { }
@@ -94,21 +94,21 @@ export const Projects: React.FC<ProjectsProps> = (props) => {
 
     return (
         <div id="Projects" className={" " + (filtered ? "sm:mr-2" : "")}>
-            <div className='text-2xl sm:basis-full'>Projects</div>
-            <div className='flex flex-row-reverse sm:flex-row gap-x-2 basis-full items-center'>
-                <div className='basis-0 grow text-right'>Commercial</div>
-                <div className='print:hidden w-6 h-6 cursor-pointer'>{sorter}</div>
-                <div className='basis-0 grow'>Hobby</div>
+            <div className="text-2xl sm:basis-full">Projects</div>
+            <div className="flex flex-row-reverse sm:flex-row gap-x-2 basis-full items-center">
+                <div className="basis-0 grow text-right">Commercial</div>
+                <div className="print:hidden w-6 h-6 cursor-pointer">{sorter}</div>
+                <div className="basis-0 grow">Hobby</div>
             </div>
             {[... grouped].map(([year, yearOfProjects]) => {
-                return <div key={year} className='basis-full flex flex-wrap'>
-                        <div className='basis-full flex items-center my-2'><span className='m-auto'>{year}</span></div>
+                return <div key={year} className="basis-full flex flex-wrap">
+                        <div className="basis-full flex items-center my-2"><span className="m-auto">{year}</span></div>
                         {[... yearOfProjects.months].map(([month, projects]) => {
                             return <div key={`${year}-${month}`} className="basis-full flex flex-wrap sm:flex-nowrap">
-                                <div className='flex-row basis-full sm:flex-col sm:basis-1/2 sm:border-r sm:border-dashed sm:border-gray-900 sm:dark:border-gray-400'>
+                                <div className="flex-row basis-full sm:flex-col sm:basis-1/2 sm:border-r sm:border-dashed sm:border-gray-900 sm:dark:border-gray-400">
                                     <Project project={projects.commercial} left={true} filter={props.filter}/>
                                 </div>
-                                <div className='flex-row basis-full sm:flex-col sm:basis-1/2'>
+                                <div className="flex-row basis-full sm:flex-col sm:basis-1/2">
                                     <Project project={projects.hobby} left={false} filter={props.filter}/>
                                 </div>
                             </div>
