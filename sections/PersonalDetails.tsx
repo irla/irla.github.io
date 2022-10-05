@@ -27,7 +27,7 @@ const PersonalDetails: React.FC<PersonalDetailsProps> = ({}) => {
                     <a href="Paweł Irla - CV.pdf" className="print:hidden">
                         <span className="flex items-center">
                             <DocumentIcon className="inline-block h-5 w-5 mr-1" />
-                            Get PDF verion of this CV
+                            Get PDF version of this CV
                         </span>
                     </a>
                     <a href="https://irla.github.io" className="hidden print:block">
