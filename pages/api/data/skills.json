@@ -69,12 +69,22 @@
           "info": "I've spent many years with it and I could for example configure level 2 cache or add interceptors to monitor entity changes"
         },
         {
+          "name": "MySql",
+          "score": 6,
+          "info": "I used it in many projects already but I don't feel like a dba for it"
+        },
+        {
           "name": "JMS",
           "score": 6
         },
         {
           "name": "RabbitMq",
           "score": 6
+        },
+        {
+          "name": "pact.io",
+          "score": 8,
+          "info": "Not only backend related but I think fits here best"
         },
         {
           "name": "Docker",
@@ -91,11 +101,6 @@
         {
           "name": "GCP",
           "score": 2
-        },
-        {
-          "name": "MySql",
-          "score": 6,
-          "info": "I used it in many projects already but I don't feel like a dba for it"
         },
         {
           "name": "MongoDb",
