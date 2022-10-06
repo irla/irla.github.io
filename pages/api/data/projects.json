@@ -6,7 +6,7 @@
       "endDate": "Now",
       "description": "Online casino platform availbile in multiple jurisdictions. Compilant with very many complex regulations and still player friendly.",
       "role": "I've been working in many areas of the platform, from aquisition, then compliance to payments. Part of agile team. Most often focused on providing new functionalities or new services, also improving the platform as a whole.",
-      "technologies": ["Spring Boot", "Kotlin", "Java", "Jdbi", "JPA", "Spock", "RabbitMQ", "CQRS", "k8s", "GCP", "Docker", "Axon", "MySql"]
+      "technologies": ["Spring Boot", "Kotlin", "Java", "Jdbi", "JPA", "Spock", "RabbitMQ", "CQRS", "EventSourcing", "k8s", "GCP", "Docker", "Axon", "MySql", "pact.io"]
     },
     {
       "name": "Files Gateway",
